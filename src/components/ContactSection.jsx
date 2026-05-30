@@ -4,22 +4,19 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoLocationOutline } from "react-icons/io5";
 import { FiPhone, FiMail } from "react-icons/fi";
-import "@/styles/contactSection.css"; // Replace with your exact logo image path
+import "@/styles/contactSection.css";
 
 function ContactSection() {
   return (
     <footer className="cubots-footer-wrapper">
       <div className="cubots-footer-container">
-        
-        {/* ======================================================== */}
-        {/* --- TOP ROW: BRAND LOGO, TAGLINE & SOCIAL LINKS ------- */}
-        {/* ======================================================== */}
+  
         <div className="cubots-footer-top-row">
           <div className="cubots-footer-brand-side">
             <div className="cubots-footer-logo-area">
-              {/* If you are using an SVG/image logo */}
+         
               <img src= "./cubots-light.png" alt="Cubots Logo" className="cubots-footer-logo-img" />
-              {/* Fallback if logo image path fails: <span className="cubots-footer-logo-text">cb cubots</span> */}
+
             </div>
             <p className="cubots-footer-tagline">
               <strong>Intelligent AI Solutions. Smarter Operations. Real Impact.</strong>
@@ -47,12 +44,8 @@ function ContactSection() {
 
         <hr className="cubots-footer-divider" />
 
-        {/* ======================================================== */}
-        {/* --- MIDDLE ROW: LINKS LINK COLUMNS TRACK GRID --------- */}
-        {/* ======================================================== */}
         <div className="cubots-footer-links-grid">
-          
-          {/* COLUMN 1: SOLUTIONS */}
+             
           <div className="cubots-footer-col">
             <h4>Solutions</h4>
             <ul>
@@ -65,7 +58,6 @@ function ContactSection() {
             </ul>
           </div>
 
-          {/* COLUMN 2: COMPANY */}
           <div className="cubots-footer-col">
             <h4>Company</h4>
             <ul>
@@ -77,20 +69,18 @@ function ContactSection() {
             </ul>
           </div>
 
-          {/* COLUMN 3: LEGAL */}
           <div className="cubots-footer-col">
             <h4>Legal</h4>
             <ul>
-              <li><a href="/privacy">Privacy Policy</a></li>
-              <li><a href="/terms">Terms of Service</a></li>
-              <li><a href="/cookies">Cookie Policy</a></li>
-              <li><a href="/refund">Refund Policy</a></li>
+              <li><a href="/privacy-policy">Privacy Policy</a></li>
+              <li><a href="/terms-of-service">Terms of Service</a></li>
+              <li><a href="/cookie-policy">Cookie Policy</a></li>
+              <li><a href="/refund-policy">Refund Policy</a></li>
               <li><a href="/security">Security</a></li>
               <li><a href="/compliance">Compliance</a></li>
             </ul>
           </div>
 
-          {/* COLUMN 4: CONTACT INFO */}
           <div className="cubots-footer-col cubots-footer-contact-info">
             <h4>Contact</h4>
             <div className="cubots-footer-contact-item">
@@ -115,9 +105,6 @@ function ContactSection() {
 
         <hr className="cubots-footer-divider" />
 
-        {/* ======================================================== */}
-        {/* --- LOWER ROW: BOTTOM CALL TO ACTION STRIP ------------ */}
-        {/* ======================================================== */}
         <div className="cubots-footer-cta-strip">
           <div className="cubots-footer-cta-text">
             <h3>Let's Build Something Intelligent Together.</h3>
@@ -128,9 +115,6 @@ function ContactSection() {
 
         <hr className="cubots-footer-divider" />
 
-        {/* ======================================================== */}
-        {/* --- FOOTER BADGES & META DATA STRIP ------------------- */}
-        {/* ======================================================== */}
         <div className="cubots-footer-meta-strip">
           <span className="cubots-footer-copyright">© 2026 Cubemoons Pvt. Ltd. All rights reserved.</span>
           <div className="cubots-footer-meta-tags">

@@ -47,8 +47,8 @@
 
 .hero-image-side {
   position: absolute;
-  right: 0;
-  bottom: -80px;
+  left: 80px;
+  bottom: -400px;
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -114,9 +114,7 @@
   font-weight: 400;
   max-width: 360px;
 }
-
-/* SECTION 2: BUSINESS SHOWCASE                                               */
-
+                                               */
 .business-showcase-strip {
   background-color: #ffffff;
   color: #000000;
@@ -402,9 +400,7 @@
   max-width: 920px;
   margin-bottom: 2px;
 }
-
-/* SECTION 3: STICKY TIMELINE                                                 */
-
+                                                */
 .was-section {
   background-color: #ffffff;
   color: #000000;
@@ -530,7 +526,6 @@
   box-sizing: border-box;
 }
 
-/* --- LEFT: sticky number --- */
 .was-left-sticky-wrap {
   flex: 0 0 200px; 
   min-width: 200px;         
@@ -634,8 +629,7 @@
   width: 100%;
   height: 100%;
 }
-
-/* SECTION 4: BIG TYPOGRAPHY STATEMENT                                        */
+                                 
 
 .statement-section {
   background-color: #ffffff;
@@ -676,3 +670,4 @@
 
 .line-3 {
   align-self: flex-end; }
+

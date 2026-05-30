@@ -20,10 +20,6 @@ import ContactSection from "@/components/ContactSection";
 import Navbar from "@/components/Navbar";
 import waveBg from "@/assets/images/your-wave-bg.png";
 
-// ─────────────────────────────────────────────────────────────
-// Replace null values with your actual image imports like:
-// import realEstateImg1 from "@/assets/images/real-estate-1.jpg";
-// ─────────────────────────────────────────────────────────────
 
 const TABS = [
   "Real Estate",
@@ -39,7 +35,7 @@ const INDUSTRY_DATA = {
     cards: [
       {
         type: "image",
-        image: handshake, // replace with imported image
+        image: handshake, 
         title: "Customer Engagement",
         body: "Support faster communication and more organized customer interactions through connected engagement and workflow management tools.",
       },
@@ -55,7 +51,7 @@ const INDUSTRY_DATA = {
       },
       {
         type: "image",
-        image: chasmis, // replace with imported image
+        image: chasmis, 
         title: "Workflow Automation",
         body: "Automate repetitive operational tasks and reporting workflows to improve efficiency and reduce manual coordination across teams.",
       },
@@ -243,7 +239,6 @@ function Industries() {
     });
   }, []);
 
-  // Set indicator on mount
   useEffect(() => {
     updateIndicator(0);
   }, [updateIndicator]);
@@ -251,10 +246,9 @@ function Industries() {
   const handleTabClick = (tab, index) => {
     if (tab === activeTab) return;
     setActiveTab(tab);
-    setAnimKey((k) => k + 1); // increment key → remounts grid → triggers animation
+    setAnimKey((k) => k + 1); 
     updateIndicator(index);
 
-    // On mobile: scroll tab into view
     tabRefs.current[index]?.scrollIntoView({
       behavior: "smooth",
       block: "nearest",
@@ -272,11 +266,10 @@ function Industries() {
         <div className="deco-wrapper" aria-hidden="true">
     <img src={waveBlob} className="bg-deco" alt="" />
   </div>
-         {/* ── TAB NAV ── */}
+    
       <div className="ind-nav-wrapper">
         <nav className="ind-tab-nav" ref={navRef} role="tablist">
 
-          {/* Sliding pill indicator */}
           <span
             className="ind-tab-indicator"
             style={{
@@ -308,8 +301,6 @@ function Industries() {
         </nav>
       </div>
 
-      {/* ── CARDS GRID ── */}
-      {/* key={animKey} remounts this div on every tab change, re-triggering animations */}
       <div className="ind-cards-grid" key={animKey}>
 
         {cards.map((card, i) => {
@@ -329,7 +320,7 @@ function Industries() {
                     decoding="async"
                   />
                 ) : (
-                  // Placeholder when no image provided
+
                   <div className="ind-card-placeholder" />
                 )}
                 <div className="ind-card-overlay">

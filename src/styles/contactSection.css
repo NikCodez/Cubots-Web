@@ -1,5 +1,3 @@
-/* src/styles/contactSection.css */
-
 .cubots-footer-wrapper {
   background-color: #000000;
   color: #ffffff;
@@ -17,7 +15,6 @@
   box-sizing: border-box;
 }
 
-/* --- Top Row Formatting --- */
 .cubots-footer-top-row {
   display: flex;
   justify-content: space-between;
@@ -37,7 +34,7 @@
 }
 
 .cubots-footer-logo-img {
-  height: 60px; /* Standard premium layout rendering height scale */
+  height: 60px;
   object-fit: contain;
 }
 
@@ -66,7 +63,6 @@
   font-weight: 400;
 }
 
-/* Social Circles Tray */
 .cubots-footer-social-side {
   display: flex;
   gap: 1rem;
@@ -91,16 +87,14 @@
   transform: translateY(-2px);
 }
 
-/* Dividing Lines */
 .cubots-footer-divider {
   border: none;
   height: 1px;
-  background-color: #535353;
+  background-color: #414040;
   margin: 0;
   width: 100%;
 }
 
-/* --- Middle Links Grid --- */
 .cubots-footer-links-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1.3fr;
@@ -108,10 +102,8 @@
   padding: 1rem 0;
   width: 100%;
 }
-
-/* Base style for all columns to handle structural dividers */
 .cubots-footer-col {
-  border-right: 1px solid #535353; 
+  border-right: 1px solid #414040; 
   padding-right: 2rem;
   box-sizing: border-box;
   display: flex;
@@ -135,7 +127,7 @@
   width: fit-content;
   padding-left: 4rem;
 } 
-/* COLUMN 4: Push entirely to the right and align items to the end side */
+
 .cubots-footer-col.cubots-footer-contact-info,
 .cubots-footer-links-grid > .cubots-footer-col:last-child {
   border-right: none ; 
@@ -175,7 +167,6 @@
   color: #ffffff;
 }
 
-/* Contact Details Rows Placement */
 .cubots-footer-contact-item {
   display: flex;
   align-items: flex-start;
@@ -207,7 +198,7 @@
 .cubots-footer-contact-icon.location-icon {
   color: #ff3333; 
 }
-/* --- Call To Action Strip --- */
+
 .cubots-footer-cta-strip {
   display: flex;
   justify-content: space-between;
@@ -231,7 +222,7 @@
 }
 
 .cubots-footer-cta-btn {
-  background-color: #0066cc; /* Premium rich tech brand signature blue token hex */
+  background-color: #0066cc;
   color: #ffffff;
   border: none;
   padding: 1rem 1rem;
@@ -251,7 +242,6 @@
   transform: scale(0.98);
 }
 
-/* --- Bottom Metadata Bar --- */
 .cubots-footer-meta-strip {
   display: flex;
   justify-content: space-between;
@@ -275,21 +265,122 @@
 
 .cubots-footer-meta-tags span {
   font-size: 0.82rem;
-  color: #5f5f5f; /* Muted slate background subtitle metadata text matching snapshot palette */
+  color: #5f5f5f; 
   font-weight: 400;
 }
 
-/* --- Responsive Breakpoint Adjustments --- */
-@media (max-width: 1024px) {
-  .cubots-footer-container { padding: 0 2rem; }
-  .cubots-footer-links-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
-  .cubots-footer-cta-strip { flex-direction: column; align-items: flex-start; gap: 2rem; }
-  .cubots-footer-meta-strip { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
-  .cubots-footer-meta-tags { justify-content: flex-start; gap: 1rem; }
+@media (max-width: 1200px) {
+  .cubots-footer-container {
+    padding: 0 2.5rem;
+  }
+  
+  .cubots-footer-links-grid {
+    gap: 1.5rem;
+  }
+  
+  .cubots-footer-links-grid > .cubots-footer-col:nth-child(2) h4,
+  .cubots-footer-links-grid > .cubots-footer-col:nth-child(2) ul,
+  .cubots-footer-links-grid > .cubots-footer-col:nth-child(3) h4,
+  .cubots-footer-links-grid > .cubots-footer-col:nth-child(3) ul,
+  .cubots-footer-links-grid > .cubots-footer-col:last-child {
+    padding-left: 1.5rem;
+  }
+  
+  .cubots-footer-col {
+    padding-right: 1rem;
+  }
 }
 
-@media (max-width: 768px) {
-  .cubots-footer-top-row { flex-direction: column; gap: 2rem; }
-  .cubots-footer-links-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-  .cubots-footer-cta-text h3 { font-size: 1.3rem; }
+@media (max-width: 992px) {
+  .cubots-footer-wrapper {
+    padding: 4rem 0 2rem 0;
+  }
+
+  .cubots-footer-top-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .cubots-footer-brand-side {
+    max-width: 100%;
+  }
+
+  .cubots-footer-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 2rem;
+    padding: 2.5rem 0;
+  }
+
+  .cubots-footer-col {
+    border-right: none !important;
+    padding-right: 0 !important;
+  }
+
+  .cubots-footer-links-grid > .cubots-footer-col:nth-child(1),
+  .cubots-footer-links-grid > .cubots-footer-col:nth-child(2) h4,
+  .cubots-footer-links-grid > .cubots-footer-col:nth-child(2) ul,
+  .cubots-footer-links-grid > .cubots-footer-col:nth-child(3) h4,
+  .cubots-footer-links-grid > .cubots-footer-col:nth-child(3) ul,
+  .cubots-footer-links-grid > .cubots-footer-col:last-child {
+    padding-left: 0 !important;
+  }
+
+  .cubots-footer-cta-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 2rem 0;
+  }
+
+  .cubots-footer-cta-btn {
+    width: 100%;
+    text-align: center;
+    padding: 1.1rem 2rem;
+  }
+
+  .cubots-footer-meta-strip {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding-top: 2rem;
+  }
+
+  .cubots-footer-meta-tags {
+    justify-content: flex-start;
+    width: 100%;
+    gap: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .cubots-footer-container {
+    padding: 0 1.5rem;
+  }
+
+  .cubots-footer-logo-text {
+    font-size: 1.8rem;
+  }
+
+  .cubots-footer-links-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .cubots-footer-col h4 {
+    margin-bottom: 1rem;
+  }
+
+  .cubots-footer-col ul li {
+    margin-bottom: 0.85rem;
+  }
+
+  .cubots-footer-meta-tags {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .cubots-footer-meta-tags span {
+    font-size: 0.8rem;
+  }
 }

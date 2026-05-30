@@ -1,4 +1,3 @@
-// src/pages/Services.jsx
 import { useEffect, useState, useRef } from "react";
 import "@/styles/services.css";
 import servicesHero from "@/assets/images/services-hero.png";
@@ -56,7 +55,7 @@ function Services() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    // Section 2 popup observer
+
     const popupObserver = new IntersectionObserver(
       ([entry]) => {
         setShowTeam(entry.isIntersecting);
@@ -65,16 +64,13 @@ function Services() {
     );
     if (sectionRef.current) popupObserver.observe(sectionRef.current);
 
-    // Timeline number observer
-// Replace the timelineObserver with this scroll-based approach
 const handleScroll = () => {
   const steps = document.querySelectorAll(".timeline-scroll-step");
   let current = "01";
   steps.forEach((step) => {
     const rect = step.getBoundingClientRect();
-    // Only change number when the step title is near the TOP of viewport
-    // Negative rect.top means it has scrolled PAST the top
-    if (rect.top <= 90) {   // 80px from top — change only when title almost exits screen
+
+    if (rect.top <= 90) {   
       current = step.getAttribute("data-step-index");
     }
   });
@@ -100,8 +96,6 @@ return () => {
   return (
     <>
     <Navbar variant="dark"/>
-
-      {/* SECTION 1: HERO*/}
 
       <div
         className="services-wrapper"
@@ -161,8 +155,6 @@ return () => {
         </section>
       </div>
 
-      {/* SECTION 2: BUSINESS SHOWCASE*/}
-
       <section className="business-showcase-strip">
         <div className="business-strip-header">
           <h2>Power Your <span className="serif-italic-accent">Business </span> with Cubots</h2>
@@ -210,7 +202,6 @@ return () => {
           </div>
         </div>
 
-        {/* Blue popup banner */}
         <div className="reserved-space-wrapper" ref={sectionRef}>
           <div className={`sliding-team ${showTeam ? "active" : ""}`}>
             <div className="tiny-blue-box"></div>
@@ -231,7 +222,6 @@ return () => {
         </div>
       </section>
 
-{/* --- SECTION 3: STICKY TIMELINE 01–06*/}
 
 <section className="was-section">
    <div className="was-deco-wrapper" aria-hidden="true">
@@ -246,12 +236,11 @@ return () => {
   </div>
 
   <div className="was-outer">
-    {/* Sticky number */}
+
     <div className="was-left-sticky-wrap">
       <span className="was-number-display" key={activeStep}>{activeStep}</span>
     </div>
 
-    {/* Scrollable steps */}
     <div className="was-right-scroll">
       {TIMELINE_STEPS.map((step) => (
         <div
@@ -268,8 +257,6 @@ return () => {
   </div>
   
 </section>
-
-{/* --- SECTION 4: BIG TYPOGRAPHY STATEMENT*/}
 
 <section className="statement-section">
   <div className="statement-inner">
