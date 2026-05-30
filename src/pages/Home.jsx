@@ -1,9 +1,16 @@
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import "@/styles/Home.css";
 import { ArrowUpRight } from "lucide-react";
 import heroBg from "@/assets/images/cubots-hero-bg.jpg";
 import aboutBg from "@/assets/images/about-bg.png";
 import showcaseImage from "@/assets/images/about-card-image.png";
+import manufacturingImg from "@/assets/images/manufacturing.png";
+import retailImg from "@/assets/images/Retail.png";
+import logisticsImg from "@/assets/images/Logistics.png";
+import healthcareImg from "@/assets/images/Healthcare.png";
+import realEstateImg from "@/assets/images/Real-Estate.png";
+import financeImg from "@/assets/images/Finance.png";
 
 export default function Home() {
   return (
@@ -126,9 +133,11 @@ export default function Home() {
           <div className="why-header">
             <div className="why-title">
               <h2>
-                Why Cubots Stands Out <span>in
-                <br />
-                Digital Innovation
+                Why Cubots Stands Out{" "}
+                <span>
+                  in
+                  <br />
+                  Digital Innovation
                 </span>
               </h2>
             </div>
@@ -136,8 +145,8 @@ export default function Home() {
             <div className="why-description">
               <p>
                 From intelligent automation to custom software engineering, we
-                deliver <br /> future-ready solutions that drive efficiency, agility,
-                and measurable success.
+                deliver <br /> future-ready solutions that drive efficiency,
+                agility, and measurable success.
               </p>
             </div>
           </div>
@@ -159,8 +168,6 @@ export default function Home() {
               <button className="card-arrow">
                 <ArrowUpRight size={14} strokeWidth={2.4} />
               </button>
-
-
             </div>
 
             <div className="why-card card-navy">
@@ -195,6 +202,98 @@ export default function Home() {
               <button className="card-arrow dark">
                 <ArrowUpRight size={14} strokeWidth={2.4} />
               </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Industries section */}
+        <section className="industries-section">
+          <img src={aboutBg} alt="" className="industries-bg" />
+
+          <div className="industries-overlay"></div>
+
+          <div className="industries-container">
+            <div className="industries-heading">
+              <h2>
+                Industries
+                <span> We Partner With</span>
+              </h2>
+
+              <p>
+                Delivering excellence through industry-driven strategies
+                designed <br /> for sustainable growth and innovation.
+              </p>
+            </div>
+
+            <div className="industries-layout">
+              <div className="industries-left">
+                {/* TOP ROW */}
+                <div className="top-grid">
+                  <div className="industry-card dark manufacturing">
+                    <div className="blur-orb orb-1"></div>
+                    <div className="blur-orb orb-2"></div>
+
+                    <h3>Manufacturing</h3>
+                    <p>
+                      Optimize production workflows, automate support, and improve operational efficiency with AI-powered assistance.
+                    </p>
+
+                    <img src={manufacturingImg} alt="" />
+                  </div>
+
+                  <div className="industry-card light retail">
+                    <div className="light-pattern"></div>
+
+                    <h3>Retail</h3>
+                    <p>
+                      Deliver personalized shopping experiences, instant customer support, and smarter engagement across every touchpoint.
+                    </p>
+
+                    <img src={retailImg} alt="" />
+                  </div>
+                </div>
+
+                {/* BOTTOM ROW */}
+                <div className="bottom-grid">
+                  <div className="industry-card light healthcare">
+                    <div className="light-pattern"></div>
+
+                    <h3>Healthcare</h3>
+                    <p>Enhance patient communication with smart assistance.</p>
+
+                    <img src={healthcareImg} alt="" />
+                  </div>
+
+                  <div className="industry-card light logistics">
+                    <div className="light-pattern"></div>
+
+                    <h3>Logistics</h3>
+                    <p>Simplify tracking and automate customer queries.</p>
+
+                    <img src={logisticsImg} alt="" />
+                  </div>
+
+                  <div className="industry-card light finance">
+                    <div className="light-pattern"></div>
+
+                    <h3>Finance</h3>
+                    <p>Provide secure, fast, and personalized support.</p>
+
+                    <img src={financeImg} alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <div className="industry-card dark real-estate">
+                 <div className="blur-orb orb-1"></div>
+                    <div className="blur-orb orb-2"></div>
+
+                <h3>Real Estate</h3>
+
+                <p>Automate inquiries and engage buyers instantly.</p>
+
+                <img src={realEstateImg} alt="" />
+              </div>
             </div>
           </div>
         </section>

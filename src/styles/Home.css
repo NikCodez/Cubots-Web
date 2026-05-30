@@ -34,7 +34,7 @@ section {
 
 .home {
   width: 100%;
-  color: white;
+  color: #ffffff;
   overflow-x: hidden;
 }
 
@@ -399,8 +399,8 @@ section {
 }
 
 .why-cubots {
-  background: #fEFEFE;
-  padding: 10px 8%;
+  background: #ffffff;
+  padding: 10px 8% 50px;
   overflow: hidden;
 }
 
@@ -471,12 +471,6 @@ section {
   transform: translateY(-12px);
   border: 3px solid rgba(255, 255, 255, 0.35);
   z-index: 10;
-}
-
-.why-card:last-child {
-  margin-bottom: -50px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
 }
 
 .card-blue {
@@ -562,6 +556,230 @@ section {
 .card-arrow.dark {
   color: #111;
   border-color: rgba(0,0,0,.2);
+  background: transparent;
+}
+
+/* Industries section */
+
+.industries-section {
+  position: relative;
+  width: 100%;
+  padding: 120px 0;
+  background: #FFFFFF;
+  overflow: hidden;
+}
+
+.industries-bg {
+  position: absolute;
+  left: -38%;
+  top: 0%;
+  width: 67vw;
+  opacity: 0.22;
+  pointer-events: none;
+  transform:  rotate(180deg) rotate(18deg);;
+  z-index: 1;
+}
+
+.industries-container {
+  position: relative;
+  z-index: 2;
+  width: min(92%, 1300px);
+  margin: 0 auto;
+}
+
+.industries-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.industries-heading h2 {
+  font-family: "Geist", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: #111;
+}
+
+.industries-heading span {
+  font-family: "Playball", cursive;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.industries-heading p {
+  max-width: 600px;
+  margin: -24px auto 0;
+  font-weight: 500;
+  color: #5d5959;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.industries-layout {
+  display: grid;
+  grid-template-columns:
+    2fr
+    1fr;
+  gap: 10px;
+}
+
+.industries-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.top-grid {
+  display: grid;
+  grid-template-columns:
+    1fr
+    1fr;
+  gap: 10px;
+  height: 320px;
+}
+
+.bottom-grid {
+  display: grid;
+  grid-template-columns:
+    1fr
+    1fr
+    1fr;
+  gap: 10px;
+  height: 200px;
+}
+
+.real-estate {
+  position: relative;
+}
+
+.industry-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 6px 14px 14px 24px;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.industry-card:hover img {
+  transform:  scale(1.1);
+}
+
+.logistics:hover img{transform:  translateY(-30px) translateX(80px);;}
+
+.industry-card h3 {
+  position: relative;
+  z-index: 5;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: -5px;
+}
+
+.industry-card p {
+  position: relative;
+  z-index: 5;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.3;
+  max-width: 100%;
+}
+
+.dark {
+  background: #05080C;
+  color: white;
+}
+.dark p{color: #918F8F;}
+
+
+.blur-orb {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,.95) 0%,
+      rgba(255,255,255,.15) 50%,
+      transparent 80%
+    );
+
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.orb-1 {
+  top: -80px;
+  right: -20px;
+}
+.orb-2 {
+  top: 60px;
+  right: 340px;
+}
+
+.light {
+  background: #ececec;
+  color: #05080C
+}
+.light p{color: #5B5B5B;}
+
+.light::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    url("../assets/images/industry-grid-bg.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  opacity: .05;
+  filter: grayscale(100%);
+  pointer-events: none;
+}
+
+.industry-card img {
+  position: absolute;
+  pointer-events: none;
+  z-index: 20;
+  transition: transform 0.4s ease;
+}
+
+.manufacturing img {
+  bottom: -120px;
+  left: -10px;
+  width: 84%;
+}
+
+.retail img {
+  right: -10px;
+  bottom: -90px;
+  width: 57%;
+}
+
+.real-estate img {
+  bottom: 0;
+  left: 10%;
+  width: 90%;
+}
+
+.healthcare img {
+  bottom: -35px;
+  left: 50%;
+  height: 180px;
+  width: 56%;
+}
+
+.logistics img {
+  bottom: -128px;
+  left: -5%;
+  width: 88%;
+}
+
+.finance img {
+  bottom: -38px;
+  right: -15px;
+  width: 64%;
 }
 
 @media (max-width: 1200px) {
@@ -602,6 +820,17 @@ section {
   }
   .why-card p {
     font-size: 18px;
+  }
+  .industries-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  .real-estate {
+    grid-column: span 2;
+    min-height: 500px;
+  }
+  .industries-heading h2 {
+    font-size: 48px;
   }
 }
 
@@ -663,6 +892,32 @@ section {
   .about-text p {
     font-size: 16px;
     line-height: 1.8;
+  }
+  .industries-grid {
+    grid-template-columns: 1fr;
+  }
+  .industry-card,
+  .real-estate {
+    grid-column: auto;
+    grid-row: auto;
+
+    min-height: 320px;
+  }
+  .industries-heading h2 {
+    font-size: 38px;
+  }
+  .industries-heading p {
+    font-size: 16px;
+  }
+  .industry-card h3 {
+    font-size: 18px;
+  }
+  .industry-card p {
+    max-width: 100%;
+  }
+  .industries-section-bg {
+    width: 80vw;
+    left: -30%;
   }
 }
 
