@@ -1,0 +1,621 @@
+.ab-page {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Geist", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.ab-hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #000000;
+  overflow: hidden;
+}
+
+.ab-hero-content {
+  max-width: 1200px;
+  text-align: center;
+  padding: 8rem 2rem 1rem 2rem;
+  margin: 0 auto;
+}
+
+.ab-hero-title {
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  color: #ffffff;
+  max-width: 650px;
+  margin: 0 auto 1.5rem auto;
+}
+
+.ab-hero-subtitle {
+  font-size: 20px;
+  font-weight: 400;
+  color: #F5F5F5C9;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.ab-hero-image-wrap {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px; 
+  margin: -23rem auto 0 auto;
+  display: flex;
+  justify-content: center;
+  will-change: transform;
+}
+
+.ab-hero-img {
+  width: 80%;        
+  height: auto; 
+  margin-top: 400px;         
+  object-fit: contain;
+  display: block;
+  margin-bottom: -8px; 
+}
+
+/* SECTION 2: TRANSFORM  */
+
+.ab-transform {
+  background: #ffffff;
+  padding: 5rem 1rem 6rem 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ab-transform-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1100px;
+  align-items: flex-start; 
+}
+
+/* Left image */
+.ab-transform-img-wrap {
+  width: 740px;
+  height: 555px;
+  border-radius: 7px;
+  overflow: hidden;
+  aspect-ratio: 6 / 5;
+  background: #050d1a;
+}
+
+.ab-transform-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.ab-transform-img-wrap:hover .ab-transform-img {
+  transform: scale(1.04);
+}
+
+/* Right content */
+.ab-transform-content {
+  display: flex;
+  flex-direction: column;
+  width: 690px;
+  height: 600px;
+}
+
+.ab-transform-title {
+    font-family: "Geist";
+  font-size: 1.9rem;
+  font-weight: 550;
+  letter-spacing: -0.6px;
+  line-height: 1.25;
+  color: #000000;
+  margin: 0 0 0.85rem 0;
+}
+
+.ab-transform-title em {
+  font-weight: 590;
+  font-family: "Playball", Georgia, serif;
+  color: #000000;
+  letter-spacing: 1.5px;
+  line-height: 1.7;
+}
+
+.ab-transform-body {
+  font-size: 0.96rem;
+  color: #97959D;
+  font-weight: 500;
+  line-height: 1.7;
+  margin: 0 0 1.75rem 0;
+}
+
+/* Stats rows */
+.ab-transform-stats {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #eeeeee;
+}
+
+.ab-transform-stat {
+  display: grid;
+  grid-template-columns: 113px 1fr;
+  gap: 10rem;
+  align-items: center;
+  padding: 1.8rem 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.ab-transform-stat-value {
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  color: #1C1C1C;
+  line-height: 1;
+  font-family: "Geist", sans-serif;
+}
+
+.ab-transform-stat-desc {
+  font-size: 14px;
+  color: #4A4F59;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.ab-transform-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  background: #0069C8; 
+  color: #ffffff !important;
+  border-radius: 999px;
+  
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: -0.1px;
+  
+  width: fit-content;
+  min-width: 180px;
+  padding: 0.25rem 0.25rem 0.25rem 1.5rem; 
+  box-sizing: border-box;
+  
+  margin-top: 1.75rem;
+  transition: background-color 0.25s ease, transform 0.15s ease;
+  cursor: pointer;
+}
+
+.ab-transform-cta:hover {
+  background: #0052a3;
+}
+
+.ab-transform-cta:active {
+  transform: scale(0.98);
+}
+
+.ab-transform-arrow-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 30px;
+  height: 32px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  
+  flex-shrink: 0;
+  margin-left: 1.2rem;
+  transition: transform 0.25s ease;
+}
+
+.ab-transform-arrow-img {
+  width: 24px;  
+  height: 24px;
+  object-fit: contain;
+  display: block;
+}
+
+.ab-transform-cta:hover .ab-transform-arrow-wrap {
+  transform: translate(1px, -1px);
+}
+/* ========================================================================= */
+/* SECTION 3: INFINITE HORIZONTAL SCROLL ENGINE                              */
+/* ========================================================================= */
+
+.ab-resources {
+  background-color: #ffffff;
+  padding: 2rem 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ab-resources-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.ab-resources-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.ab-scroll-hint-lbl {
+  font-size: 0.85rem;
+  color: #888888;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ── HORIZONTAL SCROLL MASK CORE ── */
+.ab-resources-scroll-mask {
+  width: 100%;
+  overflow-x: auto; /* Forces slide behavior when container bounds fill up */
+  overflow-y: hidden;
+  position: relative;
+  
+  /* Modern momentum scrolling physics */
+  scroll-snap-type: x mandatory; 
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  
+  /* Hides standard desktop scrollbars across all modern browsers */
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+}
+
+.ab-resources-scroll-mask::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── FLEX SLIDER TRACK ENGINE ── */
+.ab-resources-grid {
+  display: flex; /* Swapped from grid layout track to horizontal flex line layout */
+  flex-direction: row;
+  gap: 2rem;
+  padding: 1rem 0.2rem 2rem 0.2rem;
+  width: max-content; /* Lets container size adapt infinitely to the child node dimensions */
+}
+
+/* CARD SIZING PROPERTIES */
+.ab-resource-card {
+  width: 340px; /* Locks cards into an elegant, uniform width pattern */
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  box-sizing: border-box;
+  
+  /* Alignment snappy target anchors */
+  scroll-snap-align: start; 
+  flex-shrink: 0; /* Prevents the browser from squeezing cards down horizontally */
+}
+
+.ab-card-media-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: #f5f5f7;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ab-card-media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ab-card-info-wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0 0 0;
+}
+
+.ab-card-title {
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: #000000;
+  margin: 0 0 0.75rem 0;
+}
+
+.ab-card-desc {
+  font-size: 0.95rem;
+  color: #666666;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+}
+
+.ab-card-link-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #000000;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* ── PRETTY SYSTEM SCROLL PROGRESS INDICATOR BAR ── */
+.ab-scroll-track-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 2rem;
+}
+
+.ab-scroll-track-baseline {
+  width: 120px; /* Fixed elegant width tracking anchor */
+  height: 3px;
+  background-color: #ebebeb; /* Light background tracking path rail line */
+  border-radius: 999px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ab-scroll-track-progress-pill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 35%; /* Represents initial indicator size block */
+  background-color: #0066cc; /* Brand accent blue track color */
+  border-radius: 999px;
+  
+  /* Connect optional scroll linked styles transitions here */
+  transition: transform 0.1s linear; 
+}
+/* src/styles/about.css */
+
+.ab-resources {
+  background-color: #ffffff;
+  padding: 1rem 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ab-resources-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* ── HEADER LAYOUT MATRIX ── */
+.ab-resources-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.ab-resources-title-wrap {
+  max-width: 600px;
+}
+
+.ab-resources-main-title {
+  font-size: 35px;
+  font-weight: 500;
+  letter-spacing: -1.2px;
+  color: #000000;
+  margin: 0 0 1rem 0;
+  line-height: 1.15;
+}
+
+.ab-resources-subtitle {
+  font-size: 15px;
+  font-weight: 400;
+  color: #555555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* NAVIGATION INTERFACES ARROWS */
+.ab-resources-nav-arrows {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.2rem;
+  pointer-events: auto !important;
+}
+
+.ab-nav-arrow-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  color: #888888;
+  font-size: 1.5rem;
+  font-weight: 300;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease, opacity 0.2s ease;
+  user-select: none;
+}
+
+.ab-nav-arrow-btn:hover {
+  color: #000000;
+}
+
+.ab-nav-arrow-btn:active {
+  opacity: 0.5;
+}
+
+/* ── HORIZONTAL VIEWPORT TRACK SCROLL LAYER ── */
+.ab-resources-scroll-mask {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  
+  /* Snaps scrolling targets cleanly onto anchor guidelines */
+  scroll-snap-type: x mandatory; 
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  
+  /* Strip default native browser utility track borders */
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+}
+
+.ab-resources-scroll-mask::-webkit-scrollbar {
+  display: none;
+}
+
+.ab-resources-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem; /* Matches the 32px gap spacing used in the click calculations step */
+  padding: 1rem 0.2rem 2rem 0.2rem;
+  width: max-content;
+}
+
+/* ── CARDS METRIC FOOTPRINTS ── */
+.ab-resource-card {
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  box-sizing: border-box;
+  scroll-snap-align: start; 
+  flex-shrink: 0; 
+  border: 1px solid #e8e8ed !important; /* Clean premium grey border framework */
+  border-radius: 12px !important;       /* Matches outer boundary curvature metrics */
+  padding: 1.25rem !important;          /* Gives text elements and images a uniform inward breathing margin */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.ab-card-media-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: #f5f5f7;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ab-card-media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.ab-resource-card:hover .ab-card-media-img {
+  transform: scale(1.03);
+}
+
+.ab-card-info-wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0 0 0;
+}
+
+.ab-card-title {
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: #000000;
+  margin: 0 0 0.75rem 0;
+}
+
+.ab-card-desc {
+  font-size: 0.95rem;
+  color: #666666;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+}
+
+.ab-card-link-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #000000;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.ab-card-link-arrow {
+  font-size: 1rem;
+  transition: transform 0.25s ease;
+}
+
+.ab-card-link-cta:hover {
+  opacity: 0.7;
+}
+
+.ab-card-link-cta:hover .ab-card-link-arrow {
+  transform: translate(1px, -1px);
+}
+
+/* ── MOBILITY COMPACT OVERRIDES ── */
+@media (max-width: 768px) {
+  .ab-resources {
+    padding: 4rem 1.5rem;
+  }
+  .ab-resource-card {
+    width: 290px;
+  }
+  .ab-resources-header {
+    margin-bottom: 1.5rem;
+  }
+  .ab-resources-main-title {
+    font-size: 1.8rem;
+  }
+}
+/* ── FULL MOBILITY AUTO-ADJUSTMENT RESCUE ── */
+@media (max-width: 768px) {
+  .ab-resources {
+    padding: 4rem 1.5rem;
+  }
+  .ab-resource-card {
+    width: 290px; /* Shrinks container slightly on mobile viewport boundaries */
+  }
+  .ab-resources-header {
+    margin-bottom: 1.5rem;
+  }
+}
+/* ========================================================================= */
+/* RESPONSIVE                                                                 */
+/* ========================================================================= */
+
+@media (max-width: 1024px) {
+  .ab-transform-inner {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ab-hero-content {
+    padding: 9rem 1.5rem 2rem 1.5rem;
+  }
+
+  .ab-transform {
+    padding: 4rem 1.5rem 5rem 1.5rem;
+  }
+
+  .ab-transform-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ab-transform-stat {
+    grid-template-columns: 90px 1fr;
+    gap: 1rem;
+  }
+
+  .ab-transform-stat-value {
+    font-size: 1.5rem;
+  }
+}

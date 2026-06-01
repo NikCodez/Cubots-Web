@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import Industries from "./pages/Industries";
+import About from "./pages/About";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import CookiePolicy from "./pages/CookiePolicy";
@@ -15,6 +16,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/services" element={<Services />} />
       <Route path="/industries" element={<Industries />} />
+      <Route path="/about" element={<About />} />
 
       {/* ── LEGAL ARCHITECTURE ROUTES ── */}
 
