@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
+import ContactSection from "@/components/ContactSection";
 import "@/styles/Home.css";
 import { ArrowUpRight } from "lucide-react";
 import heroBg from "@/assets/images/cubots-hero-bg.jpg";
@@ -11,8 +12,76 @@ import logisticsImg from "@/assets/images/Logistics.png";
 import healthcareImg from "@/assets/images/Healthcare.png";
 import realEstateImg from "@/assets/images/Real-Estate.png";
 import financeImg from "@/assets/images/Finance.png";
+import aiAgentsImg from "@/assets/images/AI-agents.png";
+import businessAutomationImg from "@/assets/images/business-automation.png";
+import predictiveAnalyticsImg from "@/assets/images/predictive-analytics.png";
+import dataIntelligenceImg from "@/assets/images/data-intelligence.png";
+import aiConsultingImg from "@/assets/images/ai-consulting.png";
+import customAiImg from "@/assets/images/custom-ai.png";
+import predictiveImg from "@/assets/images/Predictive-Image.png";
+import automationImg from "@/assets/images/Automation-Image.jpg";
+import roiImg from "@/assets/images/ROI-Image.png";
+
+const SERVICES = [
+  {
+    id: "ai-agents",
+    label: "AI Agents",
+    image: aiAgentsImg,
+    title: "AI Agents",
+    description:
+      "AI agents help businesses automate repetitive tasks, improve workflow coordination, and support operational efficiency across departments.",
+  },
+
+  {
+    id: "business-automation",
+    label: "Business Automation",
+    image: businessAutomationImg,
+    title: "Business Automation",
+    description:
+      "Modern businesses often manage repetitive operational processes that reduce efficiency and increase administrative workload.",
+  },
+
+  {
+    id: "predictive-analytics",
+    label: "Predictive Analytics",
+    image: predictiveAnalyticsImg,
+    title: "Predictive Analytics",
+    description:
+      "Predictive analytics helps businesses identify trends, forecast operational outcomes, and improve planning through intelligent data analysis.",
+  },
+
+  {
+    id: "data-intelligence",
+    label: "Data Intelligence",
+    image: dataIntelligenceImg,
+    title: "Data Intelligence",
+    description:
+      "Businesses generate large amounts of information across operations, customer interactions, and internal systems.",
+  },
+
+  {
+    id: "ai-consulting",
+    label: "AI Consulting",
+    image: aiConsultingImg,
+    title: "AI Consulting",
+    description:
+      "AI adoption requires more than technology implementation. Successful transformation depends on operational understanding, workflow alignment, and long term scalability planning.",
+  },
+
+  {
+    id: "custom-ai",
+    label: "Custom AI Solutions",
+    image: customAiImg,
+    title: "Custom AI Solutions",
+    description:
+      "Every organization operates differently. We develop custom AI systems tailored to specific workflows, operational requirements, and businesses.",
+  },
+];
 
 export default function Home() {
+  const [activeService, setActiveService] = useState(0);
+  const current = SERVICES[activeService];
+
   return (
     <>
       <Navbar variant="dark" />
@@ -227,7 +296,7 @@ export default function Home() {
 
             <div className="industries-layout">
               <div className="industries-left">
-                {/* TOP ROW */}
+                {/* Top Row */}
                 <div className="top-grid">
                   <div className="industry-card dark manufacturing">
                     <div className="blur-orb orb-1"></div>
@@ -235,7 +304,8 @@ export default function Home() {
 
                     <h3>Manufacturing</h3>
                     <p>
-                      Optimize production workflows, automate support, and improve operational efficiency with AI-powered assistance.
+                      Optimize production workflows, automate support, and
+                      improve operational efficiency with AI-powered assistance.
                     </p>
 
                     <img src={manufacturingImg} alt="" />
@@ -246,14 +316,16 @@ export default function Home() {
 
                     <h3>Retail</h3>
                     <p>
-                      Deliver personalized shopping experiences, instant customer support, and smarter engagement across every touchpoint.
+                      Deliver personalized shopping experiences, instant
+                      customer support, and smarter engagement across every
+                      touchpoint.
                     </p>
 
                     <img src={retailImg} alt="" />
                   </div>
                 </div>
 
-                {/* BOTTOM ROW */}
+                {/* Bottom Row */}
                 <div className="bottom-grid">
                   <div className="industry-card light healthcare">
                     <div className="light-pattern"></div>
@@ -285,8 +357,8 @@ export default function Home() {
               </div>
 
               <div className="industry-card dark real-estate">
-                 <div className="blur-orb orb-1"></div>
-                    <div className="blur-orb orb-2"></div>
+                <div className="blur-orb orb-1"></div>
+                <div className="blur-orb orb-2"></div>
 
                 <h3>Real Estate</h3>
 
@@ -297,7 +369,147 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Services Section */}
+
+        <section className="services-section">
+          <div className="services-container">
+            <div className="services-header">
+              <h2>
+                Services
+                <span> We Offer</span>
+              </h2>
+
+              <p>
+                Delivering excellence through industry-driven strategies
+                designed for sustainable growth and innovation.
+              </p>
+            </div>
+
+            {/* Tabs */}
+
+            <div className="services-tabs">
+              {SERVICES.map((service, index) => (
+                <button
+                  key={service.id}
+                  className={`service-tab ${
+                    activeService === index ? "active" : ""
+                  }`}
+                  onClick={() => setActiveService(index)}
+                >
+                  <span className="tab-dot"></span>
+
+                  {service.label}
+                </button>
+              ))}
+            </div>
+
+            {/* Showcase */}
+
+            <div className="service-showcase">
+              <img
+                src={current.image}
+                alt={current.title}
+                className="service-showcase-image"
+              />
+
+              <div className="service-showcase-overlay">
+                <h3>{current.title}</h3>
+
+                <p>{current.description}</p>
+                <a href={`/services/${current.id}`} className="service-redirect">
+                  More <ArrowUpRight size={18} strokeWidth={2.4} />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Insights Section */}
+        <section className="insights-section">
+          <div className="insights-container">
+
+            <div className="insights-heading">
+              <h2>Built Smarter</h2>
+
+              <div className="heading-middle">
+                <span>With</span>
+                <h2>Cubots</h2>
+              </div>
+            </div>
+
+            <div className="insights-intro">
+              <div className="intro-left">
+                <h3>
+                  The <span>AI Knowledge Hub</span> for Smarter Businesses
+                </h3>
+              </div>
+
+              <div className="intro-right">
+                <p>
+                  Actionable insights, expert analysis, and real-world AI
+                  applications to help organizations innovate, automate, and
+                  scale confidently.
+                </p>
+              </div>
+            </div>
+
+            <div className="insights-grid">
+              <article className="insight-card">
+                <div className="insight-image-wrapper">
+                <img src={predictiveImg} alt="" />
+                </div>
+
+                <div className="card-content">
+                  <h4>
+                    Understanding Predictive Analytics for Modern Businesses
+                  </h4>
+
+                  <p>
+                    Businesses generate enormous amounts of operational data
+                    every day. However, data alone does not create value.
+                  </p>
+                </div>
+              </article>
+
+              <article className="insight-card">
+                <div className="insight-image-wrapper">
+                <img src={automationImg} alt="" />
+                </div>
+
+                <div className="card-content">
+                  <h4>
+                    How AI Automation Is Changing Modern Business Operations
+                  </h4>
+
+                  <p>
+                    Businesses today operate in increasingly complex environments where speed, efficiency, and data driven decision making directly influence growth.
+                  </p>
+                </div>
+              </article>
+
+              <article className="insight-card">
+                <div className="insight-image-wrapper">
+                <img src={roiImg} alt="" />
+                </div>
+
+                <div className="card-content">
+                  <h4>
+                    Why Businesses Are Investing in Intelligent Automation
+                  </h4>
+
+                  <p>
+                    Businesses today operate in environments shaped by
+                    increasing operational complexity and customer expectations.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
       </main>
+
+      <ContactSection />
     </>
   );
 }
