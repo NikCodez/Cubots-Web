@@ -5,8 +5,8 @@ import { FaXTwitter } from "react-icons/fa6";
 import Navbar from "@/components/Navbar";
 import ContactSection from "@/components/ContactSection";
 
-import heroImage from "@/assets/images/predictive-analytics-hero.png";
-import articleImage from "@/assets/images/predictive-analysis-content.png";
+import heroImage from "@/assets/images/intelligent-automation-hero.png";
+import articleImage from "@/assets/images/intelligent-automation-content.png";
 import predictiveImg from "@/assets/images/Predictive-Image.png";
 import automationImg from "@/assets/images/Automation-Image.jpg";
 import roiImg from "@/assets/images/ROI-Image.png";
@@ -16,28 +16,24 @@ import "@/styles/BlogPage.css";
 
 const sections = [
   {
-    id: "what-is-predictive-analytics",
-    title: "What Is Predictive Analytics",
+    id: "understanding-intelligent-automation",
+    title: "Understanding Intelligent Automation",
   },
   {
-    id: "why-predictive-analytics-matters",
-    title: "Why Predictive Analytics Matters",
+    id: "key-benefits",
+    title: "Key Benefits Of Intelligent Automation",
   },
   {
-    id: "business-applications",
-    title: "Business Applications of Predictive Analytics",
+    id: "intelligent-automation-industries",
+    title: "Intelligent Automation Across Industries",
   },
   {
-    id: "growing-role-of-data-intelligence",
-    title: "The Growing Role of Data Intelligence",
-  },
-  {
-    id: "challenges",
-    title: "Challenges in Predictive Analytics Implementation",
+    id: "common-challenges",
+    title: "Common Challenges Businesses Face",
   },
   {
     id: "future",
-    title: "The Future Of Predictive Intelligence",
+    title: "The Future Of Intelligent Automation",
   },
   {
     id: "conclusion",
@@ -45,7 +41,7 @@ const sections = [
   },
 ];
 
-export default function PredictiveAnalytics() {
+export default function IntelligentAutomation() {
   const [activeSection, setActiveSection] = useState(sections[0].id);
 
   useEffect(() => {
@@ -90,168 +86,272 @@ export default function PredictiveAnalytics() {
         <section className="blog-layout">
           <div className="blog-main">
             <section className="blog-hero">
-              <img src={heroImage} alt="Pred-Analytics-hero" />
+              <img src={heroImage} alt="intelligent-automation-hero" />
 
               <div className="blog-hero-overlay">
                 <h1>
-                 Understanding Predictive <br /> Analytics for Modern Businesses
+                  Why Businesses Are Investing in Intelligent Automation
                 </h1>
               </div>
             </section>
 
             <article className="blog-page-content">
-              <section id="what-is-predictive-analytics">
+              <section id="understanding-intelligent-automation">
                 <h2>
-                  What Is <span>Predictive Analytics ?</span>
+                  Understanding <span>Intelligent Automation</span>
                 </h2>
 
                 <p>
-                  Predictive analytics uses data analysis, statistical modeling, and artificial intelligence to forecast possible future outcomes.
-
+                  Traditional automation systems typically follow predefined
+                  rules and repetitive instructions.
                 </p>
-                <p>These systems analyze existing business information to identify:</p>
+
+                <p>
+                  Intelligent automation extends these capabilities by
+                  introducing systems that can process information, recognize
+                  patterns, analyze operational data, and support adaptive
+                  workflows.
+                  This allows businesses to automate not only repetitive tasks
+                  but also more dynamic operational processes.
+                </p>
+
+                <p>Intelligent automation systems can support:</p>
+
                 <ul>
-                  <li>Operational patterns</li>
-                  <li>Customer trends</li>
-                  <li>Demand fluctuations</li>
-                  <li>Risk indicators</li>
-                  <li>Performance opportunities</li>
+                  <li>Customer service operations</li>
+                  <li>Internal workflow management</li>
+                  <li>Reporting and documentation</li>
+                  <li>Operational monitoring</li>
+                  <li>Scheduling systems</li>
+                  <li>Data processing</li>
+                  <li>Predictive business analysis</li>
                 </ul>
 
                 <p>
-                  The goal is to support smarter and more informed business decisions.
+                  The objective is to create operational environments that are
+                  more efficient, scalable, and responsive.
                 </p>
               </section>
 
-              <section id="why-predictive-analytics-matters">
+              <section id="key-benefits">
                 <h2>
-                 <span> Why </span>Predictive Analytics Matters ?
+                  <span>Key Benefits</span> Of Intelligent Automation
                 </h2>
+                <h3>Improved Workflow Efficiency</h3>
+                <p>
+                  Automation reduces repetitive manual work and accelerates
+                  operational processes.
+                </p>
 
                 <p>
-                  Many businesses still rely heavily on historical reporting when making operational decisions.
+                  Tasks that previously required significant administrative
+                  effort can often be managed more efficiently through
+                  intelligent systems.
                 </p>
+
                 <p>
-                  While reporting helps organizations understand past performance, predictive analytics focuses on future possibilities.
+                  This allows teams to focus more on strategic activities
+                  instead of repetitive operational management.
                 </p>
-                <p>This allows businesses to:</p>
+                <h3>Better Operational Visibility</h3>
+                <p>
+                  Connected automation systems improve visibility across
+                  workflows, processes, and business functions.
+                </p>
+
+                <p>Businesses gain clearer insights into:</p>
+
                 <ul>
-                  <li>Improve planning</li>
-                  <li>Reduce uncertainty</li>
-                  <li>Strengthen forecasting</li>
-                  <li>Identify operational risks</li>
-                  <li>Optimize resource allocation</li>
+                  <li>Workflow progress</li>
+                  <li>Operational performance</li>
+                  <li>System activity</li>
+                  <li>Reporting structures</li>
+                  <li>Process delays</li>
                 </ul>
 
                 <p>
-                  Predictive systems help organizations operate more proactively instead of reactively.
+                  Improved visibility supports faster and more informed decision
+                  making.
+                </p>
+                <h3>Scalability</h3>
+                <p>
+                  Manual workflows often become difficult to manage as
+                  organizations grow.
                 </p>
 
-              </section>
-
-              <section id="business-applications">
-                <h2>
-                   <span>Business Applications </span>of Predictive Analytics
-                </h2>
-
                 <p>
-                 Predictive analytics supports multiple areas of business operations.
+                  Intelligent automation helps businesses scale operations
+                  without proportionally increasing administrative complexity.
                 </p>
 
-                <h3>Customer Behavior Analysis</h3>
+                <p>Automation systems can support:</p>
+
+                <ul>
+                  <li>Expanding workflows</li>
+                  <li>Larger operational volumes</li>
+                  <li>Increased customer interactions</li>
+                  <li>Multi department coordination</li>
+                </ul>
 
                 <p>
-                  Businesses can identify purchasing trends, engagement patterns, and customer preferences to improve customer experiences.
+                  This flexibility is particularly important for growing
+                  organizations.
+                </p>
+                <h3>Reduced Operational Delays</h3>
+                <p>
+                  Many operational inefficiencies are caused by repetitive
+                  approvals, fragmented communication, and disconnected systems.
                 </p>
 
-                <h3>Demand Forecasting</h3>
-
                 <p>
-                 Organizations can forecast demand changes and improve inventory planning, operational scheduling, and supply chain coordination.
+                  Automation helps streamline these processes while improving
+                  execution speed and reducing workflow interruptions.
+                </p>
+                <h3>Stronger Customer Experiences</h3>
+                <p>
+                  Businesses increasingly use automation to improve customer
+                  responsiveness and operational consistency.
                 </p>
 
-                <h3>Risk Management</h3>
+                <p>Automation systems can support:</p>
+
+                <ul>
+                  <li>Faster communication</li>
+                  <li>Improved response management</li>
+                  <li>Workflow coordination</li>
+                  <li>Customer engagement processes</li>
+                </ul>
 
                 <p>
-                  Predictive systems help businesses identify operational risks and potential performance issues before they become larger problems.
-                </p>
-
-                <h3>Operational Optimization</h3>
-
-                <p>
-                  Businesses use predictive insights to improve workflows, allocate resources more effectively, and strengthen operational efficiency.
-                </p>
-
-                <h3>Financial Forecasting</h3>
-
-                <p>
-                  Predictive models support revenue planning, budgeting strategies, and performance forecasting.
+                  This contributes to more reliable and efficient customer
+                  experiences.
                 </p>
               </section>
 
               <div className="article-image">
-                <img src={articleImage} alt="Pred-Analytics-article" />
+                <img src={articleImage} alt="intelligent-automation-article" />
               </div>
 
-              <section id="growing-role-of-data-intelligence">
+              <section id="intelligent-automation-industries">
                 <h2>
-                  The<span> Growing Role </span>of Data Intelligence
+                  Intelligent Automation Across <span>Industries</span>
                 </h2>
 
                 <p>
-                  As businesses become increasingly digital, the ability to manage and interpret operational data is becoming a competitive advantage.
+                  Automation is becoming increasingly important across multiple
+                  sectors.
                 </p>
-                <p>Organizations with stronger data intelligence capabilities often benefit from:</p>
+
+                <h3>Manufacturing</h3>
+
+                <p>Manufacturers use automation systems for:</p>
+
                 <ul>
-                  <li>faster decision making</li>
-                  <li>improved operational visibility</li>
-                  <li>stronger forecasting accuracy</li>
-                  <li>greater organizational adaptability</li>
+                  <li>Production monitoring</li>
+                  <li>Inventory coordination</li>
+                  <li>Maintenance scheduling</li>
+                  <li>Workflow optimization</li>
                 </ul>
+
+                <h3>Retail</h3>
+
+                <p>Retail businesses use intelligent systems for:</p>
+
+                <ul>
+                  <li>Customer engagement</li>
+                  <li>Inventory visibility</li>
+                  <li>Operational forecasting</li>
+                  <li>Order management</li>
+                </ul>
+
+                <h3>Logistics</h3>
+
+                <p>Logistics businesses use intelligent systems for:</p>
+
+                <ul>
+                  <li>Shipment tracking</li>
+                  <li>Route optimization</li>
+                  <li>Operational coordination</li>
+                  <li>Supply chain visibility</li>
+                </ul>
+
+                <h3>Healthcare</h3>
+
+                <p>Healthcare organizations use automation to improve:</p>
+
+                <ul>
+                  <li>Administrative workflows</li>
+                  <li>Data processing</li>
+                  <li>Operational coordination</li>
+                  <li>Reporting systems</li>
+                </ul>
+
+                <h3>Finance</h3>
+
                 <p>
-                  Predictive analytics helps transform business data into actionable intelligence that supports long term growth strategies
+                  Financial organizations implement intelligent systems for:
                 </p>
+
+                <ul>
+                  <li>Operational workflows</li>
+                  <li>Reporting</li>
+                  <li>Customer processes</li>
+                  <li>Compliance monitoring</li>
+                </ul>
               </section>
 
-              <section id="challenges">
+              <section id="common-challenges">
                 <h2>
-                  <span>Challenges</span>  in Predictive Analytics Implementation
+                  Common <span>Challenges</span> Businesses Face
                 </h2>
 
                 <p>
-              Predictive systems require structured planning and reliable data environments.
+                  Successful automation requires careful planning and
+                  operational understanding.
                 </p>
-                <p>Organizations should focus on:</p>
+
+                <p>Businesses should focus on:</p>
+
                 <ul>
-                  <li>Data quality</li>
+                  <li>Workflow clarity</li>
                   <li>System integration</li>
-                  <li>Operational alignment</li>
-                  <li>Clear business objectives</li>
+                  <li>Data organization</li>
                   <li>Scalability planning</li>
+                  <li>Employee adoption</li>
+                  <li>Operational alignment</li>
                 </ul>
+
                 <p>
-                  The effectiveness of predictive analytics depends heavily on the quality and consistency of operational data.
+                  Organizations that invest in predictive intelligence today are
+                  likely to improve long term operational resilience and
+                  strategic planning capabilities.
                 </p>
               </section>
 
               <section id="future">
                 <h2>
-                  <span>The Future </span>Of Predictive Intelligence
+                  <span>The Future</span> Of Intelligent Automation
                 </h2>
 
                 <p>
-                  Predictive analytics is evolving into a core business capability across industries.
+                  As AI technologies continue evolving, automation systems are
+                  becoming more adaptive and intelligent.
                 </p>
-                <p>
-As AI systems continue improving, businesses are expected to adopt:</p>
+
+                <p>Future operational environments are expected to include:</p>
+
                 <ul>
-                  <li>Real time predictive insights</li>
-                  <li>Adaptive forecasting systems</li>
-                  <li>Intelligent operational monitoring</li>
-                  <li>Autonomous decision support tools</li>
+                  <li>Autonomous workflows</li>
+                  <li>Predictive operational systems</li>
+                  <li>Intelligent business coordination</li>
+                  <li>Real time analytics integration</li>
+                  <li>Adaptive process management</li>
                 </ul>
+
                 <p>
-                  Organizations that invest in predictive intelligence today are likely to improve long term operational resilience and strategic planning capabilities.
+                  Organizations that invest in automation today are building
+                  operational foundations for future scalability and digital
+                  transformation.
                 </p>
               </section>
 
@@ -259,14 +359,20 @@ As AI systems continue improving, businesses are expected to adopt:</p>
                 <h2>Conclusion</h2>
 
                 <p>
-                 Predictive analytics is helping businesses transform operational data into strategic insight.
+                  Intelligent automation is changing how businesses manage
+                  operations, workflows, and organizational processes.
                 </p>
 
                 <p>
-                 By improving forecasting, strengthening planning, and supporting data driven decisions, predictive systems are becoming essential tools for modern organizations.
+                  By reducing manual complexity, improving visibility, and
+                  supporting scalable systems, automation helps organizations
+                  create more efficient and connected business environments.
                 </p>
+
                 <p>
-                Cubots develops predictive analytics solutions designed to help businesses improve visibility, strengthen decision making, and build more intelligent operational systems.
+                  Cubots develops intelligent automation solutions designed to
+                  support operational growth, workflow optimization, and modern
+                  business transformation.
                 </p>
               </section>
             </article>
@@ -313,81 +419,81 @@ As AI systems continue improving, businesses are expected to adopt:</p>
           </aside>
         </section>
 
-         <section className="trends-section">
-                  <div className="trends-container">
-                    <div className="trends-intro">
-                      <div className="trend-intro-left">
-                        <h3>
-                          The <span>AI Knowledge Hub</span> for Smarter Businesses
-                        </h3>
-                      </div>
-        
-                      <div className="trend-intro-right">
-                        <p>
-                          Actionable insights, expert analysis, and real-world AI
-                          applications to help organizations innovate, automate, and
-                          scale confidently.
-                        </p>
-                      </div>
-                    </div>
-        
-                    <div className="trends-grid">
-                      <article className="trend-card">
-                        <div className="trend-image-wrapper">
-                          <span className="trend-badge">MARKET TRENDS</span>
-                          <img src={automationImg} alt="" />
-                        </div>
-        
-                        <div className="trend-card-content">
-                          <h4>
-                            How AI Automation Is Changing Modern Business Operations
-                          </h4>
-        
-                          <p>
-                            Businesses today operate in increasingly complex
-                            environments where speed, efficiency, and data driven
-                            decision making directly influence growth.
-                          </p>
-                        </div>
-                      </article>
-        
-                      <article className="trend-card">
-                        <div className="trend-image-wrapper">
-                          <img src={predictiveImg} alt="" />
-                        </div>
-        
-                        <div className="trend-card-content">
-                          <h4>
-                            Understanding Predictive Analytics for Modern Businesses
-                          </h4>
-        
-                          <p>
-                            Businesses generate enormous amounts of operational data
-                            every day. However, data alone does not create value.
-                          </p>
-                        </div>
-                      </article>
-        
-                      <article className="trend-card">
-                        <div className="trend-image-wrapper">
-                            <span className="trend-badge">MARKET TRENDS</span>
-                          <img src={roiImg} alt="" />
-                        </div>
-        
-                        <div className="trend-card-content">
-                          <h4>
-                            Why Businesses Are Investing in Intelligent Automation
-                          </h4>
-        
-                          <p>
-                            Businesses today operate in environments shaped by
-                            increasing operational complexity and customer expectations.
-                          </p>
-                        </div>
-                      </article>
-                    </div>
-                  </div>
-                </section>
+        <section className="trends-section">
+          <div className="trends-container">
+            <div className="trends-intro">
+              <div className="trend-intro-left">
+                <h3>
+                  The <span>AI Knowledge Hub</span> for Smarter Businesses
+                </h3>
+              </div>
+
+              <div className="trend-intro-right">
+                <p>
+                  Actionable insights, expert analysis, and real-world AI
+                  applications to help organizations innovate, automate, and
+                  scale confidently.
+                </p>
+              </div>
+            </div>
+
+            <div className="trends-grid">
+              <article className="trend-card">
+                <div className="trend-image-wrapper">
+                  <span className="trend-badge">MARKET TRENDS</span>
+                  <img src={automationImg} alt="" />
+                </div>
+
+                <div className="trend-card-content">
+                  <h4>
+                    How AI Automation Is Changing Modern Business Operations
+                  </h4>
+
+                  <p>
+                    Businesses today operate in increasingly complex
+                    environments where speed, efficiency, and data driven
+                    decision making directly influence growth.
+                  </p>
+                </div>
+              </article>
+
+              <article className="trend-card">
+                <div className="trend-image-wrapper">
+                  <img src={predictiveImg} alt="" />
+                </div>
+
+                <div className="trend-card-content">
+                  <h4>
+                    Understanding Predictive Analytics for Modern Businesses
+                  </h4>
+
+                  <p>
+                    Businesses generate enormous amounts of operational data
+                    every day. However, data alone does not create value.
+                  </p>
+                </div>
+              </article>
+
+              <article className="trend-card">
+                <div className="trend-image-wrapper">
+                  <span className="trend-badge">MARKET TRENDS</span>
+                  <img src={roiImg} alt="" />
+                </div>
+
+                <div className="trend-card-content">
+                  <h4>
+                    Why Businesses Are Investing in Intelligent Automation
+                  </h4>
+
+                  <p>
+                    Businesses today operate in environments shaped by
+                    increasing operational complexity and customer expectations.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
         <ContactSection />
       </main>
     </>

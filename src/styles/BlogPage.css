@@ -8,7 +8,7 @@
   position: absolute;
   right: -260px;
   top: -50px;
-  width: 800px;
+  width: 750px;
   opacity: 0.15;
   z-index: -2;
   pointer-events: none;
@@ -44,6 +44,10 @@
   object-fit: cover;
 }
 
+.blog-hero img[alt="AIAgents-hero"] {
+  object-position: 50% 20%;
+}
+
 .blog-hero::after {
   content: "";
 
@@ -52,8 +56,8 @@
 
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.85),
-    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.95),
+    rgba(0, 0, 0, 0.45),
     rgba(0, 0, 0, 0.15)
   );
 }
@@ -230,7 +234,7 @@
 
 .blog-page-content ul {
   padding-left: 28px;
-  margin-top: -10px;
+  margin-top: 0px;
 }
 
 .blog-page-content li {
@@ -270,6 +274,12 @@
 
 .article-image img[alt="Pred-Analytics-article"]{
   object-position: 50% 30%;
+}
+.article-image img[alt="intelligent-automation-article"]{
+  object-position: 50% 35%;
+}
+.article-image img[alt="ai-agents-article"]{
+  object-position: 50% 20%;
 }
 
 .trends-section {

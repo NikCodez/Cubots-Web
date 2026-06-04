@@ -14,7 +14,7 @@ function ContactSection() {
           <div className="cubots-footer-brand-side">
             <div className="cubots-footer-logo-area">
          
-              <img src= "./cubots-light.png" alt="Cubots Logo" className="cubots-footer-logo-img" />
+              <img src= "/cubots-light.png" alt="Cubots Logo" className="cubots-footer-logo-img" />
 
             </div>
             <p className="cubots-footer-tagline">
