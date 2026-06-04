@@ -4,6 +4,7 @@ import ContactSection from "@/components/ContactSection";
 import "@/styles/Home.css";
 import { ArrowUpRight } from "lucide-react";
 import heroBg from "@/assets/images/cubots-hero-bg.jpg";
+import heroVideo from "@/assets/animations/hero-video-3.mp4";
 import aboutBg from "@/assets/images/about-bg.png";
 import showcaseImage from "@/assets/images/about-card-image.png";
 import manufacturingImg from "@/assets/images/manufacturing.png";
@@ -88,7 +89,9 @@ export default function Home() {
 
       <main className="home">
         <section className="hero-section">
-          <img src={heroBg} alt="background" className="hero-bg-image" />
+          <video className="hero-bg-video" autoPlay muted loop playsInline>
+            <source src={heroVideo} type="video/mp4" />
+          </video>
 
           <div className="hero-overlay"></div>
 
@@ -127,6 +130,47 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* <section className="hero-section">
+          <img src={heroBg} alt="background" className="hero-bg-image" />
+
+          <div className="hero-overlay"></div>
+
+          <div className="grid-overlay"></div>
+
+          <div className="hero-content">
+            <div className="animated-text-wrapper">
+              <span className="static-text">Scale Faster With Your</span>
+
+              <div className="animated-word-container">
+                <div className="animated-word-track">
+                  <span>Business Automation</span>
+                  <span>Predictive Analysis</span>
+                  <span>Data Intelligence</span>
+                  <span>AI Consulting</span>
+                </div>
+              </div>
+            </div>
+
+            <p>
+              Cubots helps businesses automate workflows, analyze data, and
+              build intelligent systems using practical AI solutions designed
+              for modern growth and scalable operations.
+            </p>
+
+            <div className="hero-buttons">
+              <button className="primary-btn">Talk to Us</button>
+
+              <button className="secondary-btn">Explore Solutions</button>
+            </div>
+
+            <div className="prompt-box">
+              <textarea placeholder="Generate a report for Q2..."></textarea>
+
+              <button className="send-btn">{">"}</button>
+            </div>
+          </div>
+        </section> */}
 
         {/* About Section */}
         <section className="about-showcase">
@@ -417,7 +461,10 @@ export default function Home() {
                 <h3>{current.title}</h3>
 
                 <p>{current.description}</p>
-                <a href={`/services/${current.id}`} className="service-redirect">
+                <a
+                  href={`/services/${current.id}`}
+                  className="service-redirect"
+                >
                   More <ArrowUpRight size={18} strokeWidth={2.4} />
                 </a>
               </div>
@@ -428,7 +475,6 @@ export default function Home() {
         {/* Insights Section */}
         <section className="insights-section">
           <div className="insights-container">
-
             <div className="insights-heading">
               <h2>Built Smarter</h2>
 
@@ -457,7 +503,7 @@ export default function Home() {
             <div className="insights-grid">
               <article className="insight-card">
                 <div className="insight-image-wrapper">
-                <img src={predictiveImg} alt="" />
+                  <img src={predictiveImg} alt="" />
                 </div>
 
                 <div className="card-content">
@@ -474,7 +520,7 @@ export default function Home() {
 
               <article className="insight-card">
                 <div className="insight-image-wrapper">
-                <img src={automationImg} alt="" />
+                  <img src={automationImg} alt="" />
                 </div>
 
                 <div className="card-content">
@@ -483,14 +529,16 @@ export default function Home() {
                   </h4>
 
                   <p>
-                    Businesses today operate in increasingly complex environments where speed, efficiency, and data driven decision making directly influence growth.
+                    Businesses today operate in increasingly complex
+                    environments where speed, efficiency, and data driven
+                    decision making directly influence growth.
                   </p>
                 </div>
               </article>
 
               <article className="insight-card">
                 <div className="insight-image-wrapper">
-                <img src={roiImg} alt="" />
+                  <img src={roiImg} alt="" />
                 </div>
 
                 <div className="card-content">

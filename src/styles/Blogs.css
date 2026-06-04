@@ -171,7 +171,7 @@
     margin-bottom: 30px;
 }
 
-.newsletter-section button {
+.subscribe-btn {
   position: relative;
   display: flex;
   align-items: center;
@@ -187,13 +187,13 @@
   margin-bottom: 20px;
 }
 
-.newsletter-section button:hover {
+.subscribe-btn:hover {
   background: #4747485d;
   border: 1px solid #0069C8;
   transform: translateY(-2px);
 }
 
-.newsletter-section button:hover .sbr-btn-icon {
+.subscribe-btn:hover .sbr-btn-icon {
   background: #e8e9ea51;
   color: white;
   border: 1px solid #4a02cfe0;
@@ -210,7 +210,7 @@
   justify-content: center;
 }
 
-.newsletter-section button span {
+.subscribe-btn span {
   margin-right: 10px;
 }
 
