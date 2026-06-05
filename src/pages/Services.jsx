@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import "@/styles/services.css";
-import servicesHero from "@/assets/images/services-hero.png";
+import Blueround from "@/assets/images/Blueround.png";
 import serviceHeroBg from "@/assets/images/servicesherobg.jpeg";
 import showcaseCardImg1 from "@/assets/images/leftcardservice.png";
 import showcaseCardImg2 from "@/assets/images/rightcardservice.jpg";
@@ -114,7 +114,7 @@ return () => {
           </div>
           <div className="hero-image-side">
             <img
-              src={servicesHero}
+              src={Blueround}
               alt="AI Robot Hand holding Microchip"
               className="hero-robot-hand-img"
             />
@@ -260,12 +260,19 @@ return () => {
 
 <section className="statement-section">
   <div className="statement-inner">
-    <p className="statement-line line-1">AI for smarter</p>
-    <p className="statement-line-2"><em>Business</em></p>
-    <p className="statement-line line-3">operations</p>
+    <p className="statement-line line-1">Built Smarter</p>
+    <p className="statement-line-2"><em>With</em></p>
+    <p className="statement-line line-3">Cubots</p>
   </div>
 </section>
+{/* <div className="insights-heading">
+              <h2>Built Smarter</h2>
 
+              <div className="heading-middle">
+                <span>With</span>
+                <h2>Cubots</h2>
+              </div>
+            </div> */}
 <ContactSection/>
     </>
   );

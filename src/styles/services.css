@@ -24,11 +24,12 @@
 .hero-text-side {
   max-width: 850px;
   z-index: 2;
+  margin-top: 50px;
 }
 
 .hero-main-title {
   font-family: "Geist", sans-serif;
-  font-size: 3.6rem;
+  font-size: 2.9rem;
   font-weight: 600;
   line-height: 109%;
   letter-spacing: -3%;
@@ -37,7 +38,7 @@
 
 .hero-main-desc {
   font-family: "Geist", sans-serif;
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 550;
   line-height: 166%;
   letter-spacing: -2%;
@@ -47,8 +48,8 @@
 
 .hero-image-side {
   position: absolute;
-  left: 80px;
-  bottom: -400px;
+  right: 10px;
+  bottom: -280px;
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -56,8 +57,8 @@
 }
 
 .hero-robot-hand-img {
-  width: 100%;
-  max-width: 950px;
+  width: 50%;
+  max-width: 650px;
   height: auto;
   object-fit: contain;
   transform: translateY(-1px);
@@ -80,7 +81,7 @@
 
 .feature-divider-line {
   height: 1px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgb(158, 155, 155);
   width: 100%;
   margin-bottom: 1.5rem;
 }
@@ -88,7 +89,7 @@
 .feature-title-area {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.3rem;
   margin-bottom: 1rem;
 }
 
@@ -99,7 +100,8 @@
 }
 
 .feature-title-text {
-  font-size: 1.3rem;
+  font-style:  "geist";
+  font-size: 1rem;
   font-weight: 500;
   color: #ffffff;
   margin: 0;
@@ -400,7 +402,6 @@
   max-width: 920px;
   margin-bottom: 2px;
 }
-                                                */
 .was-section {
   background-color: #ffffff;
   color: #000000;
@@ -669,5 +670,42 @@
 }
 
 .line-3 {
-  align-self: flex-end; }
+  align-self: center;
+margin-left: 600px; }
 
+.insights-heading {
+  text-align: center;
+  margin-bottom: 180px;
+  background-color: ffffff;
+}
+
+.insights-heading h2 {
+  font-family: "Geist", sans-serif;
+  font-size: 106px;
+  transform: translateX(-150px);
+  line-height: 0.65;
+  font-weight: 600;
+  color: #000;
+}
+
+.heading-middle {
+  display: flex;
+  justify-content: center;
+  transform: translateX(100px);
+  align-items: center;
+  gap: 20px;
+  margin-top: -52px;
+}
+
+.heading-middle span {
+  font-family: "Playball", cursive;
+  font-size: 110px;
+  color: #918f8f;
+  line-height: 1;
+}
+
+.heading-middle h2 {
+  font-size: 106px;
+  transform: translateX(0px) translateY(60px);
+  margin: 0;
+}

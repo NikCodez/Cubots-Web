@@ -9,6 +9,7 @@ import CookiePolicy from "./pages/CookiePolicy";
 import RefundPolicy from "./pages/RefundPolicy";
 import Compliance from "./pages/Compliance";
 import Security from "./pages/Security";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -17,8 +18,8 @@ function App() {
       <Route path="/services" element={<Services />} />
       <Route path="/industries" element={<Industries />} />
       <Route path="/about" element={<About />} />
-
-      {/* ── LEGAL ARCHITECTURE ROUTES ── */}
+      <Route path="/contact" element={<Contact />} />
+       
 
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/terms-of-service" element={<TermsOfService />} />

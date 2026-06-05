@@ -1,621 +1,681 @@
-.ab-page {
+.first-video-section {
+  position: sticky;
+  top: 0;
+  z-index: 0;
+  height: 100vh;
   width: 100%;
-  overflow-x: hidden;
-  font-family: "Geist", -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow: hidden; 
 }
 
-.ab-hero {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
+.about-wrapper {
+min-height: 100vh;
+  color: #ffffff;
+  font-family: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #000000;
-  overflow: hidden;
-}
-
-.ab-hero-content {
-  max-width: 1200px;
-  text-align: center;
-  padding: 8rem 2rem 1rem 2rem;
-  margin: 0 auto;
-}
-
-.ab-hero-title {
-  font-size: 52px;
-  font-weight: 600;
-  line-height: 1.1;
-  letter-spacing: -2px;
-  color: #ffffff;
-  max-width: 650px;
-  margin: 0 auto 1.5rem auto;
-}
-
-.ab-hero-subtitle {
-  font-size: 20px;
-  font-weight: 400;
-  color: #F5F5F5C9;
-  line-height: 1.8;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.ab-hero-image-wrap {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  max-width: 1200px; 
-  margin: -23rem auto 0 auto;
-  display: flex;
   justify-content: center;
-  will-change: transform;
-}
-
-.ab-hero-img {
-  width: 80%;        
-  height: auto; 
-  margin-top: 400px;         
-  object-fit: contain;
-  display: block;
-  margin-bottom: -8px; 
-}
-
-/* SECTION 2: TRANSFORM  */
-
-.ab-transform {
-  background: #ffffff;
-  padding: 5rem 1rem 6rem 1rem;
-  width: 100%;
+  position: relative; 
+  z-index: 0;
+  text-align: center;
+  padding: 4rem 2rem;
   box-sizing: border-box;
 }
 
-.ab-transform-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  max-width: 1100px;
-  align-items: flex-start; 
-}
-
-/* Left image */
-.ab-transform-img-wrap {
-  width: 740px;
-  height: 555px;
-  border-radius: 7px;
-  overflow: hidden;
-  aspect-ratio: 6 / 5;
-  background: #050d1a;
-}
-
-.ab-transform-img {
+.about-video-bg {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
-  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 1;
 }
 
-.ab-transform-img-wrap:hover .ab-transform-img {
-  transform: scale(1.04);
+.about-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
 }
 
-/* Right content */
-.ab-transform-content {
+.about-content {
+    margin-top: 150px;
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
-  width: 690px;
-  height: 600px;
-}
-
-.ab-transform-title {
-    font-family: "Geist";
-  font-size: 1.9rem;
-  font-weight: 550;
-  letter-spacing: -0.6px;
-  line-height: 1.25;
-  color: #000000;
-  margin: 0 0 0.85rem 0;
-}
-
-.ab-transform-title em {
-  font-weight: 590;
-  font-family: "Playball", Georgia, serif;
-  color: #000000;
-  letter-spacing: 1.5px;
-  line-height: 1.7;
-}
-
-.ab-transform-body {
-  font-size: 0.96rem;
-  color: #97959D;
-  font-weight: 500;
-  line-height: 1.7;
-  margin: 0 0 1.75rem 0;
-}
-
-/* Stats rows */
-.ab-transform-stats {
-  display: flex;
-  flex-direction: column;
-  border-top: 1px solid #eeeeee;
-}
-
-.ab-transform-stat {
-  display: grid;
-  grid-template-columns: 113px 1fr;
-  gap: 10rem;
   align-items: center;
-  padding: 1.8rem 0;
-  border-bottom: 1px solid #eeeeee;
+  max-width: 780px;
 }
 
-.ab-transform-stat-value {
-  font-size: 40px;
-  font-weight: 500;
-  letter-spacing: -1px;
-  color: #1C1C1C;
-  line-height: 1;
-  font-family: "Geist", sans-serif;
-}
-
-.ab-transform-stat-desc {
-  font-size: 14px;
-  color: #4A4F59;
-  line-height: 1.6;
+.about-title {
+ font-family: "Geist", sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 109%;
+  letter-spacing: -3%;
+  text-transform: capitalize;
   margin: 0;
 }
 
+.about-desc {
+    font-family: "Geist", sans-serif;
+  font-size: 20px;
+  font-weight: 550;
+  line-height: 166%;
+  letter-spacing: -2%;
+  max-width: 850px;
+  color: #F5F5F5C9;
+  margin-top: 30px;
+}
+
+.mission-wrapper {
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  padding: 2px 20rem 0rem 2rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  z-index: 10;
+}
+
+.mission-image-side {
+  position: absolute;
+  right: 65rem;
+  bottom: 16rem;
+  height: 70%;
+  width: 45%;
+  opacity: 0.15;
+  transform: rotate(-20deg);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.mission-shape-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.mission-text-side {
+  max-width: 750px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: -10rem;
+}
+
+.mission-para {
+  font-family: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 40px;
+  color: #111111;
+  margin: 0;
+}
 .ab-transform-cta {
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  
-  background: #0069C8; 
+  font-family: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0069C8;
   color: #ffffff !important;
   border-radius: 999px;
-  
   font-size: 0.95rem;
   font-weight: 500;
   text-decoration: none;
   letter-spacing: -0.1px;
-  
   width: fit-content;
-  min-width: 180px;
-  padding: 0.25rem 0.25rem 0.25rem 1.5rem; 
+  min-width: 170px;
+  padding: 0.15rem 0.15rem 0.15rem 1.5rem; 
   box-sizing: border-box;
-  
   margin-top: 1.75rem;
   transition: background-color 0.25s ease, transform 0.15s ease;
   cursor: pointer;
 }
 
 .ab-transform-cta:hover {
-  background: #0052a3;
+  background: #0052a3; 
 }
 
 .ab-transform-cta:active {
   transform: scale(0.98);
 }
-
-.ab-transform-arrow-wrap {
+.ab-transform-subscribeNow-arrow-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  width: 30px;
-  height: 32px;
+  width: 38px; 
+  height: 38px;
   background-color: #ffffff;
   border-radius: 50%;
-  
   flex-shrink: 0;
   margin-left: 1.2rem;
   transition: transform 0.25s ease;
 }
 
-.ab-transform-arrow-img {
+.ab-transform-subscribeNow-arrow-img {
   width: 24px;  
   height: 24px;
   object-fit: contain;
   display: block;
 }
 
-.ab-transform-cta:hover .ab-transform-arrow-wrap {
-  transform: translate(1px, -1px);
-}
-/* ========================================================================= */
-/* SECTION 3: INFINITE HORIZONTAL SCROLL ENGINE                              */
-/* ========================================================================= */
-
-.ab-resources {
+.ab-features-section {
+  width: 100%;
   background-color: #ffffff;
-  padding: 2rem 1rem;
-  width: 100%;
+  padding: 0rem 1rem 0rem 1rem;
   box-sizing: border-box;
+  position: relative;
+  z-index: 20; 
 }
 
-.ab-resources-container {
+.mission-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto); 
+  justify-content: center;
+  gap: 1.5rem;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1500px;
   margin: 0 auto;
-}
-
-.ab-resources-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 3rem;
-  width: 100%;
-}
-
-.ab-scroll-hint-lbl {
-  font-size: 0.85rem;
-  color: #888888;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* ── HORIZONTAL SCROLL MASK CORE ── */
-.ab-resources-scroll-mask {
-  width: 100%;
-  overflow-x: auto; /* Forces slide behavior when container bounds fill up */
-  overflow-y: hidden;
-  position: relative;
-  
-  /* Modern momentum scrolling physics */
-  scroll-snap-type: x mandatory; 
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  
-  /* Hides standard desktop scrollbars across all modern browsers */
-  scrollbar-width: none; 
-  -ms-overflow-style: none;
-}
-
-.ab-resources-scroll-mask::-webkit-scrollbar {
-  display: none;
-}
-
-/* ── FLEX SLIDER TRACK ENGINE ── */
-.ab-resources-grid {
-  display: flex; /* Swapped from grid layout track to horizontal flex line layout */
-  flex-direction: row;
-  gap: 2rem;
-  padding: 1rem 0.2rem 2rem 0.2rem;
-  width: max-content; /* Lets container size adapt infinitely to the child node dimensions */
-}
-
-/* CARD SIZING PROPERTIES */
-.ab-resource-card {
-  width: 340px; /* Locks cards into an elegant, uniform width pattern */
-  display: flex;
-  flex-direction: column;
-  background: #ffffff;
   box-sizing: border-box;
-  
-  /* Alignment snappy target anchors */
-  scroll-snap-align: start; 
-  flex-shrink: 0; /* Prevents the browser from squeezing cards down horizontally */
 }
 
-.ab-card-media-wrap {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  background: #f5f5f7;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.ab-card-media-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.ab-card-info-wrap {
+.mission-box {
   display: flex;
   flex-direction: column;
-  padding: 1.5rem 0 0 0;
-}
-
-.ab-card-title {
-  font-size: 1.45rem;
-  font-weight: 600;
-  color: #000000;
-  margin: 0 0 0.75rem 0;
-}
-
-.ab-card-desc {
-  font-size: 0.95rem;
-  color: #666666;
-  line-height: 1.6;
-  margin: 0 0 1.5rem 0;
-}
-
-.ab-card-link-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  color: #000000;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-/* ── PRETTY SYSTEM SCROLL PROGRESS INDICATOR BAR ── */
-.ab-scroll-track-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 2rem;
-}
-
-.ab-scroll-track-baseline {
-  width: 120px; /* Fixed elegant width tracking anchor */
-  height: 3px;
-  background-color: #ebebeb; /* Light background tracking path rail line */
-  border-radius: 999px;
+  justify-content: space-between;
+  width: 355px;
+  min-height: 0;
+  height: 415px;
+  padding: 2rem 1.8rem 0.4rem 1.8rem; 
+  border-radius: 12px;
+  box-sizing: border-box;
   position: relative;
-  overflow: hidden;
+  overflow: hidden; 
+  bottom: 180px;
 }
 
-.ab-scroll-track-progress-pill {
-  position: absolute;
+.mission-box--dark {
+  background-color: #161616;
+  color: #ffffff;
+}
+
+.mission-box--light {
+  background-color: #f4f4f2;
+  color: #111111;
+}
+
+.mission-box-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem; 
+}
+
+.mission-box-title {
+  font-family: "Geist", sans-serif;
+  font-size: 1.3rem; 
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+  letter-spacing: -0.3px;
+}
+
+.mission-box-title em {
+  font-style: italic;
+  font-weight: 400;
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.mission-box-desc {
+  font-family: "Geist", sans-serif;
+  font-size: 0.88rem; 
+  line-height: 1.55; 
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.85;
+}
+
+.mission-box--light .mission-box-desc {
+  color: #444444;
+}
+.mission-box-graphic {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  margin-top: auto;
+}
+
+.mission-box-vector {
+  width: auto;
+  height: 95px; 
+  object-fit: contain;
+}
+
+
+@media (max-width: 1200px) {
+  .mission-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ab-features-section {
+    padding: 4rem 1.5rem;
+  }
+  .mission-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .mission-box {
+    min-height: auto;
+  }
+}
+
+.second-scroll-cage {
+  position: relative;
+  z-index: 1;
+  width: 100vw;
+}
+
+.ab-video-scroll-track {
+  position: sticky;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 35%; /* Represents initial indicator size block */
-  background-color: #0066cc; /* Brand accent blue track color */
-  border-radius: 999px;
-  
-  /* Connect optional scroll linked styles transitions here */
-  transition: transform 0.1s linear; 
+  width: 100vw !important;
+  height: 110vh !important;
+  background-color: #000000;
+  z-index: 1; 
 }
-/* src/styles/about.css */
 
-.ab-resources {
-  background-color: #ffffff;
-  padding: 1rem 1rem;
+.ab-sticky-video-view {
+  position: relative;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden;
+}
+
+.ab-scroll-video-asset {
+  position: absolute;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important; 
+
+}
+
+.ab-video-scroll-mask {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
+.ab-overlapping-content-section {
+  position: relative;
   width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff !important; 
+  padding: 12rem 4rem;
   box-sizing: border-box;
+  z-index: 30 !important;
+  box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.25);
 }
 
-.ab-resources-container {
+
+.progress-scroll-track {
+  position: relative;
   width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
+  height: 520vh; 
+  background-color: #0B0B0B;
+  overflow: clip;
+  z-index: 3;
 }
 
-/* ── HEADER LAYOUT MATRIX ── */
-.ab-resources-header {
+.progress-sticky-view {
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 3rem;
-  width: 100%;
+  align-items: center;
 }
 
-.ab-resources-title-wrap {
-  max-width: 600px;
+.progress-ribbon-bg {
+  position: absolute;
+  inset: 0;
+  scale: 1.22;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
 }
 
-.ab-resources-main-title {
-  font-size: 35px;
+.progress-horizontal-content {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  padding-left: 46vw; 
+  height: 100%;
+  z-index: 2;
+  will-change: transform;
+}
+
+.progress-header-block {
+  position: absolute; 
+  top: 3%; 
+  left: 2.5vw;
+  min-width: 520px;
+  max-width: 750px;
+  color: #ffffff;
+  font-family: "Geist", -apple-system, BlinkMacSystemFont, sans-serif;
+  z-index: 10; 
+}
+
+.progress-main-title {
+  font-size: 40px;
   font-weight: 500;
-  letter-spacing: -1.2px;
-  color: #000000;
-  margin: 0 0 1rem 0;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
   line-height: 1.15;
 }
 
-.ab-resources-subtitle {
-  font-size: 15px;
+.progress-main-title em {
+  font-style: italic;
   font-weight: 400;
-  color: #555555;
+  font-family: "Playball", Georgia, serif;
+}
+
+.progress-main-desc {
+  font-size: 15px;
   line-height: 1.6;
-  margin: 0;
+  color: #cccccc;
 }
 
-/* NAVIGATION INTERFACES ARROWS */
-.ab-resources-nav-arrows {
+.progress-cards-row {
   display: flex;
-  gap: 0.75rem;
-  margin-bottom: 0.2rem;
-  pointer-events: auto !important;
+  gap: 3rem;
+  padding-right: 15vw; 
+  height: 600px; 
+  align-items: center;
+  margin-top: 90px;
 }
 
-.ab-nav-arrow-btn {
-  background: transparent;
-  border: 1px solid transparent;
-  color: #888888;
-  font-size: 1.5rem;
-  font-weight: 300;
-  cursor: pointer;
-  padding: 0.25rem 0.5rem;
+.progress-card {
+  width: 330px;
+  height: 365px;
+  background: #000000; 
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 16px;
+  padding: 1.5rem 1rem; 
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  color: #ffffff;
+  font-family: "Geist", -apple-system, BlinkMacSystemFont, sans-serif;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+  transition: border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.progress-card:nth-child(even) {
+  transform: translateY(130px);
+}
+
+.progress-card:nth-child(odd):hover {
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-10px);
+}
+
+.progress-card:nth-child(even):hover {
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(90px);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0 0 0.85rem 0;
+  letter-spacing: -0.5px;
+}
+
+.card-graphic-wrapper {
+  width: 100%;
+  height: 125px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: color 0.2s ease, opacity 0.2s ease;
-  user-select: none;
+  margin-bottom: 1.25rem; 
 }
 
-.ab-nav-arrow-btn:hover {
-  color: #000000;
+.card-graphic-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
-.ab-nav-arrow-btn:active {
-  opacity: 0.5;
+.card-desc {
+  font-size: 0.95rem; 
+  line-height: 1.5; 
+  color: #999999;
+  margin: 0;
+  overflow: hidden; 
 }
 
-/* ── HORIZONTAL VIEWPORT TRACK SCROLL LAYER ── */
-.ab-resources-scroll-mask {
-  width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  position: relative;
-  
-  /* Snaps scrolling targets cleanly onto anchor guidelines */
-  scroll-snap-type: x mandatory; 
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  
-  /* Strip default native browser utility track borders */
-  scrollbar-width: none; 
-  -ms-overflow-style: none;
-}
-
-.ab-resources-scroll-mask::-webkit-scrollbar {
-  display: none;
-}
-
-.ab-resources-grid {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem; /* Matches the 32px gap spacing used in the click calculations step */
-  padding: 1rem 0.2rem 2rem 0.2rem;
-  width: max-content;
-}
-
-/* ── CARDS METRIC FOOTPRINTS ── */
-.ab-resource-card {
-  width: 330px;
-  display: flex;
-  flex-direction: column;
-  background: #ffffff;
-  box-sizing: border-box;
-  scroll-snap-align: start; 
-  flex-shrink: 0; 
-  border: 1px solid #e8e8ed !important; /* Clean premium grey border framework */
-  border-radius: 12px !important;       /* Matches outer boundary curvature metrics */
-  padding: 1.25rem !important;          /* Gives text elements and images a uniform inward breathing margin */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
-}
-
-.ab-card-media-wrap {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  background: #f5f5f7;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.ab-card-media-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-.ab-resource-card:hover .ab-card-media-img {
-  transform: scale(1.03);
-}
-
-.ab-card-info-wrap {
-  display: flex;
-  flex-direction: column;
-  padding: 1.5rem 0 0 0;
-}
-
-.ab-card-title {
-  font-size: 1.45rem;
-  font-weight: 600;
-  color: #000000;
-  margin: 0 0 0.75rem 0;
-}
-
-.ab-card-desc {
-  font-size: 0.95rem;
-  color: #666666;
-  line-height: 1.6;
-  margin: 0 0 1.5rem 0;
-}
-
-.ab-card-link-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  color: #000000;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-decoration: none;
-  transition: opacity 0.2s ease;
-}
-
-.ab-card-link-arrow {
-  font-size: 1rem;
-  transition: transform 0.25s ease;
-}
-
-.ab-card-link-cta:hover {
-  opacity: 0.7;
-}
-
-.ab-card-link-cta:hover .ab-card-link-arrow {
-  transform: translate(1px, -1px);
-}
-
-/* ── MOBILITY COMPACT OVERRIDES ── */
-@media (max-width: 768px) {
-  .ab-resources {
-    padding: 4rem 1.5rem;
-  }
-  .ab-resource-card {
-    width: 290px;
-  }
-  .ab-resources-header {
-    margin-bottom: 1.5rem;
-  }
-  .ab-resources-main-title {
-    font-size: 1.8rem;
-  }
-}
-/* ── FULL MOBILITY AUTO-ADJUSTMENT RESCUE ── */
-@media (max-width: 768px) {
-  .ab-resources {
-    padding: 4rem 1.5rem;
-  }
-  .ab-resource-card {
-    width: 290px; /* Shrinks container slightly on mobile viewport boundaries */
-  }
-  .ab-resources-header {
-    margin-bottom: 1.5rem;
-  }
-}
-/* ========================================================================= */
-/* RESPONSIVE                                                                 */
-/* ========================================================================= */
-
-@media (max-width: 1024px) {
-  .ab-transform-inner {
-    gap: 3rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .ab-hero-content {
-    padding: 9rem 1.5rem 2rem 1.5rem;
+@media (max-width: 992px) {
+  .progress-scroll-track {
+    height: auto !important;
+    padding: 6rem 2rem;
   }
 
-  .ab-transform {
-    padding: 4rem 1.5rem 5rem 1.5rem;
+  .progress-sticky-view {
+    position: relative;
+    height: auto;
+    width: 100%;
+    overflow: visible;
   }
 
-  .ab-transform-inner {
-    grid-template-columns: 1fr;
+  .progress-horizontal-content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0;
+    transform: none !important;
+  }
+
+  .progress-header-block {
+    min-width: 100%;
+    margin-right: 0;
+    margin-bottom: 4rem;
+    margin-top: 0;
+  }
+
+  .progress-main-title {
+    font-size: 2.75rem;
+  }
+
+  .progress-cards-row {
+    flex-direction: column;
+    width: 100%;
     gap: 2.5rem;
+    padding-right: 0;
+    height: auto;
+  }
+
+  .progress-card {
+    width: 100%;
+    height: auto;
+    min-height: 420px;
+  }
+
+  .progress-card:nth-child(even) {
+    transform: none;
+  }
+  .progress-card:nth-child(odd):hover,
+  .progress-card:nth-child(even):hover {
+    transform: translateY(-4px);
   }
 }
 
-@media (max-width: 480px) {
-  .ab-transform-stat {
-    grid-template-columns: 90px 1fr;
-    gap: 1rem;
-  }
 
-  .ab-transform-stat-value {
-    font-size: 1.5rem;
+.ab-faq-section {
+  position: relative;
+  width: 100%;
+  background-color: #ffffff; 
+  padding: 8rem 4rem 10rem 4rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.faq-glass-ribbon-bg {
+  position: absolute;
+  top: 0;
+  right: -25%;
+  width: 70vw;
+  height: 100%;
+  background-size: contain;
+  background-position: center right;
+  background-repeat: no-repeat;
+  opacity: 0.25; 
+  pointer-events: none;
+  z-index: 1;
+}
+
+.faq-container-box {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 2; 
+}
+
+.faq-main-heading {
+  font-family: "Geist", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: #111111;
+  text-align: center;
+  margin: 0 0 4.5rem 0;
+  letter-spacing: -1.5px;
+}
+
+.faq-main-heading em {
+  font-style: italic;
+  font-weight: 400;
+  font-family: "Playfair Display", "Playball", Georgia, serif;
+}
+
+.faq-accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.faq-accordion-card {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e2e8f0; 
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-accordion-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 1.75rem 2rem;
+  box-sizing: border-box;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+.faq-question-text {
+  font-family: "Geist", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  line-height: 1.4;
+  padding-right: 2rem;
+  transition: color 0.25s ease;
+}
+
+.faq-icon-indicator {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #718096;
+  line-height: 1;
+  user-select: none;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.faq-collapse-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.faq-answer-inner-content {
+  padding: 0 2rem 2rem 2rem;
+  box-sizing: border-box;
+}
+
+.faq-answer-paragraph {
+  font-family: "Geist", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #4a5568;
+  margin: 0;
+}
+
+.faq-card--open {
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+}
+
+.faq-card--open .faq-question-text {
+  color: #0069C8; 
+}
+
+.faq-card--open .faq-collapse-panel {
+  max-height: 250px;
+}
+
+.faq-card--open .faq-icon-indicator {
+  color: #0069C8;
+}
+
+@media (max-width: 768px) {
+  .ab-faq-section {
+    padding: 5rem 1.5rem;
+  }
+  .faq-main-heading {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+  .faq-accordion-trigger {
+    padding: 1.5rem;
+  }
+  .faq-question-text {
+    font-size: 1rem;
+  }
+  .faq-answer-inner-content {
+    padding: 0 1.5rem 1.5rem 1.5rem;
   }
 }
