@@ -65,7 +65,6 @@ export default function Navbar({ variant = "dark" }) {
           <span>Ask Cubots</span>
 
           <div className="btn-icon">
-            {/* <ArrowUpRight size={16} strokeWidth={2.4} /> */}
             <img src={cubotsGif} alt="Cubots Animation" />
           </div>
         </Link>

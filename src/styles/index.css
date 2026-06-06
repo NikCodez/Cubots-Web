@@ -1,0 +1,16 @@
+/* src/styles/index.css */
+
+/* Target the absolute base tags of the entire browser document */
+html, body, #root {
+  margin: 0;
+  font-family: "Inter", 'sans-serif';
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000000; /* Forces the browser body to match your dark theme */
+}
+
+/* Highly recommended bonus reset for layout calculations */
+* {
+  box-sizing: border-box;
+}
