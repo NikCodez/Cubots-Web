@@ -1,0 +1,218 @@
+.ask-cubots-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+.ask-sidebar {
+  width: 200px;
+  min-width: 200px;
+  padding: 18px 30px;
+  border-right: 2px solid #dddddd;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: #f5f5f5;
+  z-index: 10;
+}
+
+.new-chat-btn {
+  height: 42px;
+  border: none;
+  border-radius: 999px;
+  background: #0069c8;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.new-chat-btn span {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.search-chat-btn {
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: #000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.ask-main {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.ask-cubots-header {
+  position: absolute;
+  top: 15px;
+  left: 14px;
+  right: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 20;
+}
+
+.ask-cubots-logo {
+  width: 150px;
+  height: auto;
+}
+
+.close-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #0069c8;
+  background-color: #d7e2f6;
+  color: #0069c8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.close-btn:hover {
+  background: #0069c8;
+  color: white;
+}
+
+.ask-content {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 130px;
+  position: relative;
+  z-index: 5;
+}
+
+.ask-content h1 {
+  font-family: Geist,Inter;
+  text-align: center;
+  font-size: 62px;
+  font-weight: 500;
+  color: #20202c;
+  line-height: 1;
+}
+
+.ask-content h1 span {
+  font-family: "Playball", cursive;
+  color: #5b73ff;
+  font-weight: 400;
+}
+
+.ask-content p {
+  text-align: center;
+  margin-top: -20px;
+  color: #888;
+  font-size: 18px;
+}
+
+.ask-box {
+  margin-top: 34px;
+  min-height: 165px;
+  border-radius: 20px;
+  border: 1px solid #7cb5ff;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  padding: 18px;
+  position: relative;
+}
+
+.ask-box textarea {
+  width: 100%;
+  height: 95px;
+  border: none;
+  background: transparent;
+  resize: none;
+  outline: none;
+  font-size: 17px;
+  color: #222;
+}
+
+.ask-box textarea::placeholder {
+  color: #8f8f8f;
+  font-family: Geist;
+}
+
+.ask-actions {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  display: flex;
+  gap: 12px;
+}
+
+.mic-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: url("/mic.svg");
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.send-query-btn {
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: #0069c8;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.suggestions {
+  margin-top: 28px;
+}
+
+.suggestions h4 {
+  color: #5d6f90;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.suggestion-list {
+  display: flex;
+  gap: 10px;
+}
+
+.suggestion-list button {
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid #d5e5f8;
+  background: #edf4fb;
+  padding: 0 14px;
+  color: #8b8b8b;
+  cursor: pointer;
+}
+
+.ask-bg-ribbon {
+  position: absolute;
+  width: 950px;
+  right: -250px;
+  top: 270px;
+  opacity: 0.18;
+  pointer-events: none;
+}

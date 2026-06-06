@@ -94,7 +94,7 @@ export default function AIAutomation() {
 
               <div className="blog-hero-overlay">
                 <h1>
-                  How AI Automation Is Changing Modern Business Operations
+                  How AI Automation Is Changing <br /> <span> Modern Business Operations</span>
                 </h1>
               </div>
             </section>
@@ -412,6 +412,7 @@ export default function AIAutomation() {
 
               <article className="trend-card">
                 <div className="trend-image-wrapper">
+                  <span className="trend-badge">MARKET TRENDS</span>
                   <img src={predictiveImg} alt="" />
                 </div>
 

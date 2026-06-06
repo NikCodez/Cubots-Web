@@ -6,6 +6,8 @@ import PredictiveAnalytics from "@/pages/blogs/PredictiveAnalytics";
 import IntelligentAutomation from "@/pages/blogs/IntelligentAutomation";
 import AIAgents from "@/pages/blogs/AIAgents";
 import DataIntelligence from "./pages/blogs/DataIntelligence";
+import WhyUs from "./pages/WhyUs";
+import AskCubots from "./pages/AskCubots";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
       <Route path="/blogs/intelligent-automation" element={<IntelligentAutomation />} />
       <Route path="/blogs/ai-agents" element={<AIAgents />} />
       <Route path="/blogs/data-intelligence" element={<DataIntelligence />} />
+      <Route path="/why-us" element={<WhyUs />} />
+      <Route path="/ask-cubots" element={<AskCubots />} />
     </Routes>
   );
 }

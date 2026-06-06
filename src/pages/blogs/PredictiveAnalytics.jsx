@@ -353,6 +353,7 @@ As AI systems continue improving, businesses are expected to adopt:</p>
         
                       <article className="trend-card">
                         <div className="trend-image-wrapper">
+                          <span className="trend-badge">MARKET TRENDS</span>
                           <img src={predictiveImg} alt="" />
                         </div>
         

@@ -77,6 +77,11 @@
   font-weight: 600;
 }
 
+.blog-hero h1 span{
+  font-family: "Playball",cursive;
+  font-weight: 400;
+}
+
 .blog-sidebar {
   position: sticky;
   top: 0px;

@@ -459,6 +459,7 @@ export default function IntelligentAutomation() {
 
               <article className="trend-card">
                 <div className="trend-image-wrapper">
+                  <span className="trend-badge">MARKET TRENDS</span>
                   <img src={predictiveImg} alt="" />
                 </div>
 

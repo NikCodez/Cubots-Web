@@ -1,11 +1,16 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import ContactSection from "@/components/ContactSection";
+import CubotsTagline from "@/components/CubotsTagline";
 import "@/styles/Home.css";
 import { ArrowUpRight } from "lucide-react";
 import heroBg from "@/assets/images/cubots-hero-bg.jpg";
 import heroVideo from "@/assets/animations/hero-video-3.mp4";
+import CubotsVideo from "@/assets/animations/Cubots-video.mp4";
 import aboutBg from "@/assets/images/about-bg.png";
+import featureImg1 from "@/assets/images/about-feature-1.jpg";
+import featureImg2 from "@/assets/images/about-feature-2.jpg";
+import featureImg3 from "@/assets/images/about-feature-3.jpg";
 import showcaseImage from "@/assets/images/about-card-image.png";
 import manufacturingImg from "@/assets/images/manufacturing.png";
 import retailImg from "@/assets/images/Retail.png";
@@ -92,10 +97,9 @@ export default function Home() {
           <video className="hero-bg-video" autoPlay muted loop playsInline>
             <source src={heroVideo} type="video/mp4" />
           </video>
+          {/* <img src={heroBg} alt="background" className="hero-bg-image" /> */}
 
           <div className="hero-overlay"></div>
-
-          <div className="grid-overlay"></div>
 
           <div className="hero-content">
             <div className="animated-text-wrapper">
@@ -131,61 +135,74 @@ export default function Home() {
           </div>
         </section>
 
-        {/* <section className="hero-section">
-          <img src={heroBg} alt="background" className="hero-bg-image" />
-
-          <div className="hero-overlay"></div>
-
-          <div className="grid-overlay"></div>
-
-          <div className="hero-content">
-            <div className="animated-text-wrapper">
-              <span className="static-text">Scale Faster With Your</span>
-
-              <div className="animated-word-container">
-                <div className="animated-word-track">
-                  <span>Business Automation</span>
-                  <span>Predictive Analysis</span>
-                  <span>Data Intelligence</span>
-                  <span>AI Consulting</span>
-                </div>
-              </div>
-            </div>
-
-            <p>
-              Cubots helps businesses automate workflows, analyze data, and
-              build intelligent systems using practical AI solutions designed
-              for modern growth and scalable operations.
-            </p>
-
-            <div className="hero-buttons">
-              <button className="primary-btn">Talk to Us</button>
-
-              <button className="secondary-btn">Explore Solutions</button>
-            </div>
-
-            <div className="prompt-box">
-              <textarea placeholder="Generate a report for Q2..."></textarea>
-
-              <button className="send-btn">{">"}</button>
-            </div>
-          </div>
-        </section> */}
-
         {/* About Section */}
         <section className="about-showcase">
           <img src={aboutBg} alt="background" className="about-bg-image" />
 
-          <div className="about-overlay"></div>
-
           <div className="about-container">
-            <h2>
-              Helping businesses simplify <br /> operations through
-              <span> automation, analytics,</span>
-              <br />
-              and
-              <span> intelligent systems.</span>
-            </h2>
+            <div className="about-content">
+              <div className="about-left">
+                <h2>
+                  Discover What
+                  <br />
+                  Sets Us <span>Apart</span>
+                </h2>
+
+                <p>
+                  From intelligent automation to custom software engineering, we
+                  deliver future-ready solutions that drive efficiency, agility,
+                  and measurable success.
+                </p>
+              </div>
+
+              <div className="about-right">
+                <div className="about-feature-card">
+                  <div className="about-feature-image-wrapper">
+                    <img src={featureImg1} alt="Practical AI" />
+                  </div>
+
+                  <div className="feature-content">
+                    <h3>Practical AI for Smarter Operations</h3>
+
+                    <p>
+                      Transform workflows with intelligent automation that
+                      reduces manual effort, improves efficiency, and drives
+                      better outcomes.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="about-feature-card">
+                  <div className="about-feature-image-wrapper">
+                    <img src={featureImg2} alt="Practical AI" />
+                  </div>
+
+                  <div className="feature-content">
+                    <h3>Custom Software Built for Growth</h3>
+
+                    <p>
+                      Scalable digital solutions engineered to support evolving
+                      business needs and long-term success.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="about-feature-card">
+                  <div className="about-feature-image-wrapper">
+                    <img src={featureImg3} alt="Practical AI" />
+                  </div>
+
+                  <div className="feature-content">
+                    <h3>Data-Driven Decision Making</h3>
+
+                    <p>
+                      Leverage actionable insights and predictive analytics to
+                      make confident, strategic business decisions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <div className="showcase-card">
               <img
@@ -212,17 +229,6 @@ export default function Home() {
               </p>
 
               <p>
-                <span>
-                  Cubots helps businesses build intelligent operational
-                  environments through automation, predictive analytics, and
-                  scalable AI solutions designed around practical business
-                  needs. Our approach focuses on creating connected systems that
-                  improve visibility, streamline workflows, and support
-                  sustainable operational growth.
-                </span>
-              </p>
-
-              <p>
                 We believe technology should make business operations simpler,
                 more efficient, and easier to manage. By combining intelligent
                 automation with data-driven insights, we help organisations
@@ -238,83 +244,6 @@ export default function Home() {
                 productivity, and build future-ready operations designed for
                 lasting impact.
               </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="why-cubots">
-          <div className="why-header">
-            <div className="why-title">
-              <h2>
-                Why Cubots Stands Out{" "}
-                <span>
-                  in
-                  <br />
-                  Digital Innovation
-                </span>
-              </h2>
-            </div>
-
-            <div className="why-description">
-              <p>
-                From intelligent automation to custom software engineering, we
-                deliver <br /> future-ready solutions that drive efficiency,
-                agility, and measurable success.
-              </p>
-            </div>
-          </div>
-
-          <div className="why-cards">
-            <div className="why-card card-blue">
-              <h3>
-                Transforming Modern Businesses with Scalable Technology
-                Solutions
-              </h3>
-
-              <p>
-                From intelligent automation platforms to custom digital
-                ecosystems, we create adaptable solutions that improve
-                performance, accelerate innovation, and enable long-term
-                operational success.
-              </p>
-
-              <button className="card-arrow">
-                <ArrowUpRight size={14} strokeWidth={2.4} />
-              </button>
-            </div>
-
-            <div className="why-card card-navy">
-              <h3>
-                Empowering Businesses with Practical AI and Automation Solutions
-              </h3>
-
-              <p>
-                From streamlined workflow automation to scalable software
-                development, we design technology solutions focused on
-                measurable outcomes, operational clarity, and future-ready
-                business transformation.
-              </p>
-
-              <button className="card-arrow">
-                <ArrowUpRight size={14} strokeWidth={2.4} />
-              </button>
-            </div>
-
-            <div className="why-card card-light">
-              <h3>
-                Driving Smarter Business Growth with Intelligent Digital
-                Solutions
-              </h3>
-
-              <p>
-                From AI-powered automation to data-driven software systems, we
-                build practical technology solutions that enhance efficiency,
-                simplify operations, and support sustainable business growth.
-              </p>
-
-              <button className="card-arrow dark">
-                <ArrowUpRight size={14} strokeWidth={2.4} />
-              </button>
             </div>
           </div>
         </section>
@@ -414,6 +343,92 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="sticky-video-section">
+          <div className="sticky-video-wrapper">
+            <video className="sticky-video" autoPlay muted loop playsInline>
+              <source src={CubotsVideo} type="video/mp4" />
+            </video>
+          </div>
+        
+
+        <section className="why-cubots">
+          <div className="why-header">
+            <div className="why-title">
+              <h2>
+                Why Cubots Stands Out{" "}
+                <span>
+                  in
+                  <br />
+                  Digital Innovation
+                </span>
+              </h2>
+            </div>
+
+            <div className="why-description">
+              <p>
+                From intelligent automation to custom software engineering, we
+                deliver <br /> future-ready solutions that drive efficiency,
+                agility, and measurable success.
+              </p>
+            </div>
+          </div>
+
+          <div className="why-cards">
+            <div className="why-card card-blue">
+              <h3>
+                Transforming Modern Businesses with Scalable Technology
+                Solutions
+              </h3>
+
+              <p>
+                From intelligent automation platforms to custom digital
+                ecosystems, we create adaptable solutions that improve
+                performance, accelerate innovation, and enable long-term
+                operational success.
+              </p>
+
+              <button className="card-arrow">
+                <ArrowUpRight size={14} strokeWidth={2.4} />
+              </button>
+            </div>
+
+            <div className="why-card card-navy">
+              <h3>
+                Empowering Businesses with Practical AI and Automation Solutions
+              </h3>
+
+              <p>
+                From streamlined workflow automation to scalable software
+                development, we design technology solutions focused on
+                measurable outcomes, operational clarity, and future-ready
+                business transformation.
+              </p>
+
+              <button className="card-arrow">
+                <ArrowUpRight size={14} strokeWidth={2.4} />
+              </button>
+            </div>
+
+            <div className="why-card card-light">
+              <h3>
+                Driving Smarter Business Growth with Intelligent Digital
+                Solutions
+              </h3>
+
+              <p>
+                From AI-powered automation to data-driven software systems, we
+                build practical technology solutions that enhance efficiency,
+                simplify operations, and support sustainable business growth.
+              </p>
+
+              <button className="card-arrow dark">
+                <ArrowUpRight size={14} strokeWidth={2.4} />
+              </button>
+            </div>
+          </div>
+        </section>
+        </section>
+
         {/* Services Section */}
 
         <section className="services-section">
@@ -450,7 +465,7 @@ export default function Home() {
 
             {/* Showcase */}
 
-            <div className="service-showcase">
+            <div key={activeService} className="service-showcase">
               <img
                 src={current.image}
                 alt={current.title}
@@ -475,15 +490,7 @@ export default function Home() {
         {/* Insights Section */}
         <section className="insights-section">
           <div className="insights-container">
-            <div className="insights-heading">
-              <h2>Built Smarter</h2>
-
-              <div className="heading-middle">
-                <span>With</span>
-                <h2>Cubots</h2>
-              </div>
-            </div>
-
+            <CubotsTagline />
             <div className="insights-intro">
               <div className="intro-left">
                 <h3>

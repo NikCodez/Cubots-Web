@@ -420,6 +420,7 @@ export default function DataIntelligence() {
 
               <article className="trend-card">
                 <div className="trend-image-wrapper">
+                  <span className="trend-badge">MARKET TRENDS</span>
                   <img src={predictiveImg} alt="" />
                 </div>
 

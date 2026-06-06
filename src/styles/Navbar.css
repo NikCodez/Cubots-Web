@@ -140,3 +140,17 @@
     gap: 20px;
   }
 }
+
+@media (min-height: 900px) and (min-width: 1400px) {
+  
+.navbar-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+}

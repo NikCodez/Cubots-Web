@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import ContactSection from "@/components/ContactSection";
+import CubotsTagline from "@/components/CubotsTagline";
 import "@/styles/Blogs.css";
 import AIAgentsImage from "@/assets/images/AIAgents.png";
 import PredictiveAnalyticsImage from "@/assets/images/PredictiveAnalytics.png";
@@ -18,9 +19,9 @@ export default function Blogs() {
         <section className="blogs-hero">
           <div className="blogs-hero-content">
             <h1>
-              Insights On AI, Automation, And
+              Insights On <span>AI, Automation, And
               <br />
-              Intelligent Business Systems
+              Intelligent Business</span> Systems
             </h1>
 
             <p>
@@ -37,7 +38,7 @@ export default function Blogs() {
               <img src={PredictiveAnalyticsImage} alt="Predictive Analytics" />
               <div className="blog-content">
                 <h3>
-                  Understanding Predictive Analytics for Modern Businesses
+                  Understanding Predictive <span> Analytics for Modern Businesses</span>
                 </h3>
               </div>
             </Link>
@@ -49,7 +50,7 @@ export default function Blogs() {
               <img src={AIAutomationImage} alt="AI Automation" />
               <div className="blog-content">
                 <h3>
-                  How AI Automation Is Changing Modern Business Operations
+                  How AI Automation Is Changing Modern <span> Business Operations</span>
                 </h3>
               </div>
             </Link>
@@ -60,21 +61,21 @@ export default function Blogs() {
                 alt="Intelligent Automation"
               />
               <div className="blog-content">
-                <h3>Why Businesses Are Investing in Intelligent Automation</h3>
+                <h3>Why Businesses Are Investing in <br /><span>Intelligent Automation</span> </h3>
               </div>
             </Link>
 
             <Link to="/blogs/data-intelligence" className="blog-card card-middle-right">
               <img src={DataIntelligenceImage} alt="Data Intelligence" />
               <div className="blog-content">
-                <h3>How Data Intelligence Supports Business Growth</h3>
+                <h3>How Data Intelligence Supports <span> Business Growth</span></h3>
               </div>
             </Link>
 
             <Link to="/blogs/ai-agents" className="blog-card card-bottom">
               <img src={AIAgentsImage} alt="AI Agents" />
               <div className="blog-content">
-                <h3>The Role of AI Agents in Modern Business Operations</h3>
+                <h3>The Role of AI Agents in Modern <span>Business Operations</span></h3>
               </div>
             </Link>
           </div>
@@ -82,13 +83,11 @@ export default function Blogs() {
 
         <section className="newsletter-section">
           <h2>
-            Insights On AI, Automation, And <br /> Intelligent Business Systems
+            Where <span>AI Meets</span> <br /> Business Innovation
           </h2>
 
           <p>
-            Receive practical insights on intelligent automation, predictive
-            analytics, operational intelligence, and <br /> emerging business
-            technologies from Cubots by CubeMoons.
+            Discover practical strategies, emerging technologies, and real-world applications of AI that are <br /> reshaping customer experiences and operations.
           </p>
 
           <button className="subscribe-btn">
@@ -98,16 +97,12 @@ export default function Blogs() {
             </div>
           </button>
         </section>
-
-        <section className="blog-typography">
-          <h2>AI for smarter</h2>
-
-          <span>Business</span>
-
-          <h2 className="operations">operations</h2>
-        </section>
+        <section className="blog-tagline-wrapper">
+         <CubotsTagline/>
+         </section>
       </main>
-
+      
+       
       <ContactSection />
     </>
   );
