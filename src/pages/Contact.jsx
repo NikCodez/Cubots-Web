@@ -3,6 +3,7 @@ import "@/styles/contact.css";
 import ContactSection from "@/components/ContactSection";
 import Navbar from "@/components/Navbar";
 import contactBg from "@/assets/images/contactbluebg.png";
+import CubotsTagline from "@/components/CubotsTagline";
 
 export default function Contact() {
   return (
@@ -11,7 +12,7 @@ export default function Contact() {
     <section className="contact-section">
       <div className="contact-container">
         <div className="contact-header">
-          <h1 className="contact-title">Contact Us</h1>
+          <h1 className="contact-title">Contact <span className="serif-italic-accent"> Us</span></h1>
           <p className="contact-subtitle">
             Technology alone does not create business value. Successful AI adoption <br className="desktop-break" />
             requires the right strategy,
@@ -119,6 +120,9 @@ export default function Contact() {
 
         </div>
       </div>
+    </section>
+    <section className="contact-tagline-wrapper">
+    <CubotsTagline/>
     </section>
     <ContactSection/>
     </>

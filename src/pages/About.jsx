@@ -21,6 +21,7 @@ import iconLeadership from "@/assets/images/icon-leadership.png";
 import iconAiInnovation from "@/assets/images/icon-bulb.png";
 import iconTransformation from "@/assets/images/icon-transformation.png";
 import iconWhatsNext from "@/assets/images/icon-next.png";
+import CubotsTagline from "@/components/CubotsTagline";
 
 
 export default function CubotsAbout() {
@@ -161,7 +162,7 @@ export default function CubotsAbout() {
             </video>
             <div className="about-overlay" />
             <div className="about-content">
-              <h1 className="about-title">Building Intelligent Systems <br /> For Modern Businesses</h1>
+              <h1 className="about-title">Building Intelligent Systems <br /> For <span className="serif-italic-accent">Modern Businesses</span></h1>
               <p className="about-desc">Cubots  helps organizations automate processes, unlock business intelligence, and build scalable AI solutions designed around real operational needs.</p>
             </div>
           </div>
@@ -309,7 +310,7 @@ export default function CubotsAbout() {
 
       <section className="ab-faq-section">
 
-        <div 
+        <div
           className="faq-glass-ribbon-bg" 
           style={{ backgroundImage: `url(${waveBlob})` }}
         />
@@ -348,6 +349,9 @@ export default function CubotsAbout() {
             })}
           </div>
         </div>
+      </section>
+      <section className="about-tagline-wrapper">
+      <CubotsTagline/>
       </section>
     <ContactSection/>
     </>

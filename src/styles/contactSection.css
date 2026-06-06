@@ -196,7 +196,7 @@
 }
 
 .cubots-footer-contact-icon.location-icon {
-  color: #ff3333; 
+  color: #8c8c8c; 
 }
 
 .cubots-footer-cta-strip {
@@ -383,4 +383,15 @@
   .cubots-footer-meta-tags span {
     font-size: 0.8rem;
   }
+}
+
+@media (min-height: 900px) and (min-width: 1400px) {
+
+  .cubots-footer-container {
+  width: 100%;
+  max-width: 1620px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
 }

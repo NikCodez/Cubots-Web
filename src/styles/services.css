@@ -54,7 +54,7 @@
   display: flex;
   justify-content: flex-end;
   pointer-events: none;
-}
+} 
 
 .hero-robot-hand-img {
   width: 50%;
@@ -72,7 +72,7 @@
   max-width: 800px;
   width: 100%;
   z-index: 2;
-}
+} 
 
 .feature-col {
   display: flex;
@@ -93,12 +93,6 @@
   margin-bottom: 1rem;
 }
 
-.feature-title-icon {
-  font-size: 1.25rem;
-  display: flex;
-  align-items: center;
-}
-
 .feature-title-text {
   font-style:  "geist";
   font-size: 1rem;
@@ -117,6 +111,122 @@
   max-width: 360px;
 }
 
+.feature-title-icon {
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-height: 900px) and (min-width: 1400px) {
+  .services-wrapper {
+    min-height: 100vh;
+    padding-bottom: 50px;
+  }
+
+  .hero-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.hero-text-side {
+  max-width: 900px;
+  z-index: 2;
+  margin-top: 40px;
+}
+
+.hero-main-title {
+  font-family: "Geist", sans-serif;
+  font-size: 4.2rem;
+  font-weight: 600;
+  line-height: 109%;
+  letter-spacing: -3%;
+  text-transform: capitalize;
+}
+
+.hero-main-desc {
+  font-family: "Geist", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 550;
+  line-height: 166%;
+  letter-spacing: -2%;
+  max-width: 850px;
+  color: #F5F5F5C9;
+}
+
+.hero-image-side {
+  position: absolute;
+  right: 20px;
+  bottom: -300px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  pointer-events: none;
+} 
+
+.hero-robot-hand-img {
+  width: 50%;
+  max-width: 720px;
+  height: auto;
+  object-fit: contain;
+  transform: translateY(-1px);
+}
+
+.features-row {
+  margin-top: 95px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  max-width: 840px;
+  width: 100%;
+  z-index: 2;
+} 
+
+.feature-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-divider-line {
+  height: 1px;
+  background-color: rgb(158, 155, 155);
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.feature-title-area {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.feature-title-text {
+  font-style:  "geist";
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.2px;
+}
+
+.feature-description-text {
+  font-size: 0.9rem;
+  color: #a09f9f;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 400;
+  max-width: 350px;
+}
+
+.feature-title-icon {
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+}
+}
+
 .business-showcase-strip {
   background-color: #ffffff;
   color: #000000;
@@ -125,7 +235,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: "Geist", Roboto, sans-serif;
   width: 100%;
 }
 
@@ -161,10 +271,11 @@
   display: grid;
   grid-template-columns: 1.2fr 1.4fr 1.4fr 1.3fr;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1600px;
   align-items: center;
   margin-bottom: 4rem;
 }
+
 .business-info-side-panel:first-child {
   padding-right: 1.5rem;           
 }
@@ -631,81 +742,9 @@
   height: 100%;
 }
                                  
-
-.statement-section {
+.services-tagline-wrapper{
   background-color: #ffffff;
-  width: 100%;
-  padding: 3rem 4rem 8rem 4rem;
-  box-sizing: border-box;
-}
-
-.statement-inner {
-  max-width: 1400px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.statement-line{
-  font-family: "Geist", -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: clamp(4rem, 7vw, 10rem);
-  font-weight: 600;
-  line-height: 1.0;
-  letter-spacing: -4px;
-  color: #000000;
-  margin: 0;
-}
-
-.statement-line-2 {
-  font-family: "Playball", Georgia, serif;
-  font-size: clamp(4rem, 7vw, 10rem);
-  font-weight: 400;
-  font-style: italic;
-  line-height: 1.0;
-  letter-spacing: -2px;
-  color: #918F8F;
-  margin: 0;
-  align-self: center; 
-}
-
-.line-3 {
-  align-self: center;
-margin-left: 600px; }
-
-.insights-heading {
-  text-align: center;
-  margin-bottom: 180px;
-  background-color: ffffff;
-}
-
-.insights-heading h2 {
-  font-family: "Geist", sans-serif;
-  font-size: 106px;
-  transform: translateX(-150px);
-  line-height: 0.65;
-  font-weight: 600;
-  color: #000;
-}
-
-.heading-middle {
-  display: flex;
-  justify-content: center;
-  transform: translateX(100px);
-  align-items: center;
-  gap: 20px;
-  margin-top: -52px;
-}
-
-.heading-middle span {
-  font-family: "Playball", cursive;
-  font-size: 110px;
-  color: #918f8f;
-  line-height: 1;
-}
-
-.heading-middle h2 {
-  font-size: 106px;
-  transform: translateX(0px) translateY(60px);
-  margin: 0;
+  overflow: hidden;
+  margin-top: 0px;
+  padding-top: 50px;
 }

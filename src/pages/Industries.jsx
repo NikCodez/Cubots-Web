@@ -19,6 +19,7 @@ import waveBlob from "@/assets/images/r22.png";
 import ContactSection from "@/components/ContactSection";
 import Navbar from "@/components/Navbar";
 import waveBg from "@/assets/images/your-wave-bg.png";
+import CubotsTagline from "@/components/CubotsTagline";
 
 
 const TABS = [
@@ -366,7 +367,9 @@ function Industries() {
       </div>
 
     </section>
-    
+    <section className="industries-tagline-wrapper">
+    <CubotsTagline/>
+    </section>
 <ContactSection/>
     </>
   );

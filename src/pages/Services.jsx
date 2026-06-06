@@ -9,6 +9,7 @@ import waveBlob from "@/assets/images/r22.png";
 import blob from "@/assets/images/leftside.png";
 import ContactSection from "@/components/ContactSection";
 import Navbar from "@/components/Navbar";
+import CubotsTagline from "@/components/CubotsTagline";
 
 const TIMELINE_STEPS = [
   {
@@ -257,22 +258,9 @@ return () => {
   </div>
   
 </section>
-
-<section className="statement-section">
-  <div className="statement-inner">
-    <p className="statement-line line-1">Built Smarter</p>
-    <p className="statement-line-2"><em>With</em></p>
-    <p className="statement-line line-3">Cubots</p>
-  </div>
+<section className="services-tagline-wrapper">
+<CubotsTagline/>
 </section>
-{/* <div className="insights-heading">
-              <h2>Built Smarter</h2>
-
-              <div className="heading-middle">
-                <span>With</span>
-                <h2>Cubots</h2>
-              </div>
-            </div> */}
 <ContactSection/>
     </>
   );

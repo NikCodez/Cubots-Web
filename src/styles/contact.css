@@ -1,7 +1,7 @@
 :root {
   --primary-blue: #0069C8;
   --dark-text: #111111;
-  --gray-text: #666666;
+  --gray-text: ##8C8C8C;
   --border-color: #E2E8F0;
   --bg-color: #FAFAFA;
 }
@@ -18,6 +18,9 @@
   margin: 0 auto;
   
 }
+
+.serif-italic-accent {
+  font-family: "Playball", cursive;}
 
 .contact-header {
   text-align: center;
@@ -124,7 +127,8 @@
 .submit-btn:hover { background-color: #0052a3; }
 .submit-btn:active { transform: scale(0.98); }
 .contact-info-card {
-  position: relative;
+  position: sticky;
+  top: 2rem;
   border-radius: 8px;
   color: #ffffff;
   box-shadow: 0 4px 20px rgba(0, 105, 200, 0.2);
@@ -212,4 +216,11 @@
   .contact-info-card {
     min-height: auto;
   }
+}
+
+.contact-tagline-wrapper{
+  background-color: #ffffff;
+  overflow: hidden;
+  margin-top: 0px;
+  padding-top: 50px;
 }
