@@ -130,23 +130,23 @@ export default function CubotsAbout() {
   const faqData = [
     {
       question: "How can AI help improve business operations?",
-      answer: "AI drives systemic operational scale by automating complex manual data workflows, introducing highly accurate predictive insights, and optimizing asset tracking parameters to eliminate structural bottlenecks."
+      answer: "Artificial intelligence helps organizations streamline repetitive processes, improve operational visibility, and make better decisions using data driven insights. From workflow automation and predictive analytics to intelligent agents and business intelligence systems, AI can support greater efficiency, scalability, and responsiveness across business functions."
     },
     {
-      question: "What types of AI solutions do you build?",
-      answer: "We engineer customized intelligent ecosystems including machine learning pipelines, autonomous software agents, predictive analytical models, computer vision systems, and cognitive workflow automations tailored around specific target KPIs."
+      question: "What types of AI solutions does Cubots provide?",
+      answer: "Cubots develops practical AI solutions designed around business needs. Our capabilities include AI agents, conversational AI systems, workflow automation, predictive analytics, operational intelligence platforms, custom AI development, and intelligent business solutions that integrate with existing operations."
     },
     {
-      question: "Can AI be integrated into existing systems?",
-      answer: "Yes, our architectures are engineered for seamless interoperability. We deploy robust pipelines that securely anchor modern AI layers directly onto your legacy databases and current tech infrastructure without disrupting continuous business lines."
+      question: "Can AI be integrated with our existing systems?",
+      answer: "Yes. Most organizations already use software platforms, databases, CRMs, ERPs, or operational tools. Our approach focuses on integrating intelligent systems into existing workflows whenever possible, helping businesses improve processes without disrupting daily operations."
     },
     {
-      question: "How do you identify the right AI solution for a business?",
-      answer: "Through data auditing and strategic discovery. We inspect your existing data structures and workflows to target high-leverage bottlenecks where automation yields the highest operational returns."
+      question: "How do you determine the right AI solution for a business?",
+      answer: "Every business operates differently. We begin by understanding operational challenges, workflow structures, business objectives, and growth priorities. This allows us to identify opportunities where AI can create measurable value and support long term business outcomes."
     },
     {
-      question: "How do you ensure AI delivers measurable impact?",
-      answer: "Every deployment runs alongside a rigorous baseline metrics evaluation. We build dedicated real-time telemetry control frames into our implementations to cleanly verify throughput increases, cost reductions, and efficiency gains."
+      question: "Why choose Cubots by CubeMoons?",
+      answer: "Cubots combines intelligent technologies with practical business understanding. Our focus is not simply implementing AI but helping organizations create scalable, usable, and measurable solutions that improve operations, support growth, and deliver long term value."
     }
   ];
 
