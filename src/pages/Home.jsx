@@ -1,22 +1,105 @@
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
+import ContactSection from "@/components/ContactSection";
+import CubotsTagline from "@/components/CubotsTagline";
 import "@/styles/Home.css";
 import { ArrowUpRight } from "lucide-react";
 import heroBg from "@/assets/images/cubots-hero-bg.jpg";
+import heroVideo from "@/assets/animations/hero-video-3.mp4";
+import CubotsVideo from "@/assets/animations/Cubots-video.mp4";
 import aboutBg from "@/assets/images/about-bg.png";
+import featureImg1 from "@/assets/images/about-feature-1.jpg";
+import featureImg2 from "@/assets/images/about-feature-2.jpg";
+import featureImg3 from "@/assets/images/about-feature-3.jpg";
 import showcaseImage from "@/assets/images/about-card-image.png";
+import manufacturingImg from "@/assets/images/manufacturing.png";
+import retailImg from "@/assets/images/Retail.png";
+import logisticsImg from "@/assets/images/Logistics.png";
+import healthcareImg from "@/assets/images/Healthcare.png";
+import realEstateImg from "@/assets/images/Real-Estate.png";
+import financeImg from "@/assets/images/Finance.png";
+import aiAgentsImg from "@/assets/images/AI-agents.png";
+import businessAutomationImg from "@/assets/images/business-automation.png";
+import predictiveAnalyticsImg from "@/assets/images/predictive-analytics.png";
+import dataIntelligenceImg from "@/assets/images/data-intelligence.png";
+import aiConsultingImg from "@/assets/images/ai-consulting.png";
+import customAiImg from "@/assets/images/custom-ai.png";
+import predictiveImg from "@/assets/images/Predictive-Image.png";
+import automationImg from "@/assets/images/Automation-Image.jpg";
+import roiImg from "@/assets/images/ROI-Image.png";
+
+const SERVICES = [
+  {
+    id: "ai-agents",
+    label: "AI Agents",
+    image: aiAgentsImg,
+    title: "AI Agents",
+    description:
+      "AI agents help businesses automate repetitive tasks, improve workflow coordination, and support operational efficiency across departments.",
+  },
+
+  {
+    id: "business-automation",
+    label: "Business Automation",
+    image: businessAutomationImg,
+    title: "Business Automation",
+    description:
+      "Modern businesses often manage repetitive operational processes that reduce efficiency and increase administrative workload.",
+  },
+
+  {
+    id: "predictive-analytics",
+    label: "Predictive Analytics",
+    image: predictiveAnalyticsImg,
+    title: "Predictive Analytics",
+    description:
+      "Predictive analytics helps businesses identify trends, forecast operational outcomes, and improve planning through intelligent data analysis.",
+  },
+
+  {
+    id: "data-intelligence",
+    label: "Data Intelligence",
+    image: dataIntelligenceImg,
+    title: "Data Intelligence",
+    description:
+      "Businesses generate large amounts of information across operations, customer interactions, and internal systems.",
+  },
+
+  {
+    id: "ai-consulting",
+    label: "AI Consulting",
+    image: aiConsultingImg,
+    title: "AI Consulting",
+    description:
+      "AI adoption requires more than technology implementation. Successful transformation depends on operational understanding, workflow alignment, and long term scalability planning.",
+  },
+
+  {
+    id: "custom-ai",
+    label: "Custom AI Solutions",
+    image: customAiImg,
+    title: "Custom AI Solutions",
+    description:
+      "Every organization operates differently. We develop custom AI systems tailored to specific workflows, operational requirements, and businesses.",
+  },
+];
 
 export default function Home() {
+  const [activeService, setActiveService] = useState(0);
+  const current = SERVICES[activeService];
+
   return (
     <>
       <Navbar variant="dark" />
 
       <main className="home">
         <section className="hero-section">
-          <img src={heroBg} alt="background" className="hero-bg-image" />
+          <video className="hero-bg-video" autoPlay muted loop playsInline>
+            <source src={heroVideo} type="video/mp4" />
+          </video>
+          {/* <img src={heroBg} alt="background" className="hero-bg-image" /> */}
 
           <div className="hero-overlay"></div>
-
-          <div className="grid-overlay"></div>
 
           <div className="hero-content">
             <div className="animated-text-wrapper">
@@ -56,16 +139,70 @@ export default function Home() {
         <section className="about-showcase">
           <img src={aboutBg} alt="background" className="about-bg-image" />
 
-          <div className="about-overlay"></div>
-
           <div className="about-container">
-            <h2>
-              Helping businesses simplify <br /> operations through
-              <span> automation, analytics,</span>
-              <br />
-              and
-              <span> intelligent systems.</span>
-            </h2>
+            <div className="about-content">
+              <div className="about-left">
+                <h2>
+                  Discover What
+                  <br />
+                  Sets Us <span>Apart</span>
+                </h2>
+
+                <p>
+                  From intelligent automation to custom software engineering, we
+                  deliver future-ready solutions that drive efficiency, agility,
+                  and measurable success.
+                </p>
+              </div>
+
+              <div className="about-right">
+                <div className="about-feature-card">
+                  <div className="about-feature-image-wrapper">
+                    <img src={featureImg1} alt="Practical AI" />
+                  </div>
+
+                  <div className="feature-content">
+                    <h3>Practical AI for Smarter Operations</h3>
+
+                    <p>
+                      Transform workflows with intelligent automation that
+                      reduces manual effort, improves efficiency, and drives
+                      better outcomes.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="about-feature-card">
+                  <div className="about-feature-image-wrapper">
+                    <img src={featureImg2} alt="Practical AI" />
+                  </div>
+
+                  <div className="feature-content">
+                    <h3>Custom Software Built for Growth</h3>
+
+                    <p>
+                      Scalable digital solutions engineered to support evolving
+                      business needs and long-term success.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="about-feature-card">
+                  <div className="about-feature-image-wrapper">
+                    <img src={featureImg3} alt="Practical AI" />
+                  </div>
+
+                  <div className="feature-content">
+                    <h3>Data-Driven Decision Making</h3>
+
+                    <p>
+                      Leverage actionable insights and predictive analytics to
+                      make confident, strategic business decisions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <div className="showcase-card">
               <img
@@ -92,17 +229,6 @@ export default function Home() {
               </p>
 
               <p>
-                <span>
-                  Cubots helps businesses build intelligent operational
-                  environments through automation, predictive analytics, and
-                  scalable AI solutions designed around practical business
-                  needs. Our approach focuses on creating connected systems that
-                  improve visibility, streamline workflows, and support
-                  sustainable operational growth.
-                </span>
-              </p>
-
-              <p>
                 We believe technology should make business operations simpler,
                 more efficient, and easier to manage. By combining intelligent
                 automation with data-driven insights, we help organisations
@@ -122,13 +248,118 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Industries section */}
+        <section className="industries-section">
+          <img src={aboutBg} alt="" className="industries-bg" />
+
+          <div className="industries-overlay"></div>
+
+          <div className="industries-container">
+            <div className="industries-heading">
+              <h2>
+                Industries
+                <span> We Partner With</span>
+              </h2>
+
+              <p>
+                Delivering excellence through industry-driven strategies
+                designed <br /> for sustainable growth and innovation.
+              </p>
+            </div>
+
+            <div className="industries-layout">
+              <div className="industries-left">
+                {/* Top Row */}
+                <div className="top-grid">
+                  <div className="industry-card dark manufacturing">
+                    <div className="blur-orb orb-1"></div>
+                    <div className="blur-orb orb-2"></div>
+
+                    <h3>Manufacturing</h3>
+                    <p>
+                      Optimize production workflows, automate support, and
+                      improve operational efficiency with AI-powered assistance.
+                    </p>
+
+                    <img src={manufacturingImg} alt="" />
+                  </div>
+
+                  <div className="industry-card light retail">
+                    <div className="light-pattern"></div>
+
+                    <h3>Retail</h3>
+                    <p>
+                      Deliver personalized shopping experiences, instant
+                      customer support, and smarter engagement across every
+                      touchpoint.
+                    </p>
+
+                    <img src={retailImg} alt="" />
+                  </div>
+                </div>
+
+                {/* Bottom Row */}
+                <div className="bottom-grid">
+                  <div className="industry-card light healthcare">
+                    <div className="light-pattern"></div>
+
+                    <h3>Healthcare</h3>
+                    <p>Enhance patient communication with smart assistance.</p>
+
+                    <img src={healthcareImg} alt="" />
+                  </div>
+
+                  <div className="industry-card light logistics">
+                    <div className="light-pattern"></div>
+
+                    <h3>Logistics</h3>
+                    <p>Simplify tracking and automate customer queries.</p>
+
+                    <img src={logisticsImg} alt="" />
+                  </div>
+
+                  <div className="industry-card light finance">
+                    <div className="light-pattern"></div>
+
+                    <h3>Finance</h3>
+                    <p>Provide secure, fast, and personalized support.</p>
+
+                    <img src={financeImg} alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <div className="industry-card dark real-estate">
+                <div className="blur-orb orb-1"></div>
+                <div className="blur-orb orb-2"></div>
+
+                <h3>Real Estate</h3>
+
+                <p>Automate inquiries and engage buyers instantly.</p>
+
+                <img src={realEstateImg} alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="sticky-video-section">
+          <div className="sticky-video-wrapper">
+            <video className="sticky-video" autoPlay muted loop playsInline>
+              <source src={CubotsVideo} type="video/mp4" />
+            </video>
+          </div>
+        
+
         <section className="why-cubots">
           <div className="why-header">
             <div className="why-title">
               <h2>
-                Why Cubots Stands Out <span>in
-                <br />
-                Digital Innovation
+                Why Cubots Stands Out{" "}
+                <span>
+                  in
+                  <br />
+                  Digital Innovation
                 </span>
               </h2>
             </div>
@@ -136,8 +367,8 @@ export default function Home() {
             <div className="why-description">
               <p>
                 From intelligent automation to custom software engineering, we
-                deliver <br /> future-ready solutions that drive efficiency, agility,
-                and measurable success.
+                deliver <br /> future-ready solutions that drive efficiency,
+                agility, and measurable success.
               </p>
             </div>
           </div>
@@ -159,8 +390,6 @@ export default function Home() {
               <button className="card-arrow">
                 <ArrowUpRight size={14} strokeWidth={2.4} />
               </button>
-
-
             </div>
 
             <div className="why-card card-navy">
@@ -198,7 +427,144 @@ export default function Home() {
             </div>
           </div>
         </section>
+        </section>
+
+        {/* Services Section */}
+
+        <section className="services-section">
+          <div className="services-container">
+            <div className="services-header">
+              <h2>
+                Services
+                <span> We Offer</span>
+              </h2>
+
+              <p>
+                Delivering excellence through industry-driven strategies
+                designed for sustainable growth and innovation.
+              </p>
+            </div>
+
+            {/* Tabs */}
+
+            <div className="services-tabs">
+              {SERVICES.map((service, index) => (
+                <button
+                  key={service.id}
+                  className={`service-tab ${
+                    activeService === index ? "active" : ""
+                  }`}
+                  onClick={() => setActiveService(index)}
+                >
+                  <span className="tab-dot"></span>
+
+                  {service.label}
+                </button>
+              ))}
+            </div>
+
+            {/* Showcase */}
+
+            <div key={activeService} className="service-showcase">
+              <img
+                src={current.image}
+                alt={current.title}
+                className="service-showcase-image"
+              />
+
+              <div className="service-showcase-overlay">
+                <h3>{current.title}</h3>
+
+                <p>{current.description}</p>
+                <a
+                  href={`/services/${current.id}`}
+                  className="service-redirect"
+                >
+                  More <ArrowUpRight size={18} strokeWidth={2.4} />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Insights Section */}
+        <section className="insights-section">
+          <div className="insights-container">
+            <CubotsTagline />
+            <div className="insights-intro">
+              <div className="intro-left">
+                <h3>
+                  The <span>AI Knowledge Hub</span> for Smarter Businesses
+                </h3>
+              </div>
+
+              <div className="intro-right">
+                <p>
+                  Actionable insights, expert analysis, and real-world AI
+                  applications to help organizations innovate, automate, and
+                  scale confidently.
+                </p>
+              </div>
+            </div>
+
+            <div className="insights-grid">
+              <article className="insight-card">
+                <div className="insight-image-wrapper">
+                  <img src={predictiveImg} alt="" />
+                </div>
+
+                <div className="card-content">
+                  <h4>
+                    Understanding Predictive Analytics for Modern Businesses
+                  </h4>
+
+                  <p>
+                    Businesses generate enormous amounts of operational data
+                    every day. However, data alone does not create value.
+                  </p>
+                </div>
+              </article>
+
+              <article className="insight-card">
+                <div className="insight-image-wrapper">
+                  <img src={automationImg} alt="" />
+                </div>
+
+                <div className="card-content">
+                  <h4>
+                    How AI Automation Is Changing Modern Business Operations
+                  </h4>
+
+                  <p>
+                    Businesses today operate in increasingly complex
+                    environments where speed, efficiency, and data driven
+                    decision making directly influence growth.
+                  </p>
+                </div>
+              </article>
+
+              <article className="insight-card">
+                <div className="insight-image-wrapper">
+                  <img src={roiImg} alt="" />
+                </div>
+
+                <div className="card-content">
+                  <h4>
+                    Why Businesses Are Investing in Intelligent Automation
+                  </h4>
+
+                  <p>
+                    Businesses today operate in environments shaped by
+                    increasing operational complexity and customer expectations.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
       </main>
+
+      <ContactSection />
     </>
   );
 }

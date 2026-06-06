@@ -1,0 +1,117 @@
+.whyus-timeline-track {
+  position: relative;
+  background: #000;
+  overflow-x: clip;
+}
+
+.whyus-timeline-sticky {
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.whyus-timeline-ribbon {
+  position: absolute;
+  bottom: -40%;
+  left: -16%;
+  width: 900px;
+  opacity: 0.11;
+  transform: rotate(180deg);
+  z-index: 1;
+}
+
+.whyus-timeline-header {
+  position: absolute;
+  top: 40px;
+  left: 80px;
+  max-width: 750px;
+  z-index: 5;
+}
+
+.whyus-timeline-header h2 {
+  font-size: 42px;
+  line-height: 1.05;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.whyus-timeline-header h2 span{
+  font-family: "Playball", cursive;
+  font-weight: 400;
+}
+
+.whyus-timeline-header p {
+  color: #d0d0d0;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.whyus-timeline-content {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 420px;
+  padding-left: 250px;
+  padding-right: 120px;
+  gap: 40px;
+  will-change: transform;
+  position: relative;
+  z-index: 3;
+  transition: transform 0.12s ease-out;
+  overflow: visible;
+}
+
+.whyus-timeline-card {
+  position: relative;
+  width: 420px;
+  flex-shrink: 0;
+  padding-top: 0;
+}
+
+.whyus-timeline-node {
+  position: absolute;
+  top: 0;
+  left: 4px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.whyus-timeline-line {
+  position: absolute;
+  top: 45px;
+  left: 18px;
+  width: 1px;
+  height: 550px;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.whyus-timeline-card h3 {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0 0 20px 0;
+}
+
+.whyus-timeline-card-content {
+  margin-left: 80px;
+  padding-top: 38px;
+}
+
+.whyus-timeline-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.whyus-timeline-desc p {
+  color: #d3d3d3;
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0;
+}

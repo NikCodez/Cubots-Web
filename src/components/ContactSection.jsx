@@ -1,4 +1,3 @@
-// src/components/ContactSection.jsx
 import React from "react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -15,7 +14,7 @@ function ContactSection() {
           <div className="cubots-footer-brand-side">
             <div className="cubots-footer-logo-area">
          
-              <img src= "./cubots-light.png" alt="Cubots Logo" className="cubots-footer-logo-img" />
+              <img src= "/cubots-light.png" alt="Cubots Logo" className="cubots-footer-logo-img" />
 
             </div>
             <p className="cubots-footer-tagline">
@@ -64,7 +63,7 @@ function ContactSection() {
               <li><a href="/about">About Us</a></li>
               <li><a href="/process">Our Process</a></li>
               <li><a href="/careers">Careers</a></li>
-              <li><a href="/blog">Blog</a></li>
+              <li><a href="/blogs">Blog</a></li>
               <li><a href="/contact">Contact Us</a></li>
             </ul>
           </div>
@@ -97,7 +96,7 @@ function ContactSection() {
             </div>
             <div className="cubots-footer-contact-item">
               <FiMail className="cubots-footer-contact-icon" />
-              <a href="mailto:info@cubots.com">info@cubots.com</a>
+              <a href="mailto:info@cubots.com">contact@cubots.ai</a>
             </div>
           </div>
 

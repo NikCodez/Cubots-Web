@@ -1,0 +1,235 @@
+.blogs {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.blogs-hero {
+  padding-top: 160px;
+  padding-bottom: 120px;
+}
+
+.blogs-hero-content {
+  width: min(92%, 900px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.blogs-hero h1 {
+  font-size: 48px;
+  line-height: 1.05;
+  font-weight: 600;
+}
+
+.blogs-hero h1 span{
+  font-family: "Playball", cursive;
+  font-weight: 400;
+}
+
+.blogs-hero p {
+  max-width: 700px;
+  margin: 30px auto 0;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #8C8C8C;
+}
+
+.blogs-grid {
+  width: min(95%, 1600px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns:
+    0.9fr
+    1.1fr
+    0.7fr;
+
+  grid-template-rows:
+    350px
+    350px
+    400px;
+  gap: 14px;
+}
+
+.card-large-left {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+}
+
+.card-top-right {
+  grid-column: 2 / span 2;
+  grid-row: 1;
+}
+
+.card-middle-left {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.card-middle-right {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.card-bottom {
+  grid-column: 2 / span 2;
+  grid-row: 3;
+}
+
+.blog-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  cursor: pointer;
+  
+}
+
+.blog-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s ease;
+  
+}
+
+.blog-card img[alt="AI Agents"] {
+  object-position: top;
+}
+
+.blog-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.25),
+    transparent
+  );
+}
+
+.blog-card:hover img {
+  transform: scale(1.06);
+}
+
+.blog-content {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 10px;
+  z-index: 3;
+  color: white;
+}
+
+.blog-content h3 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.blog-content h3 span{
+  font-family: "Playball",cursive;
+  font-size: 28px;
+}
+
+.newsletter-section {
+  position: relative;
+  width: min(91%, 1400px);
+  background-image: url("../assets/images/Blogs-newsletter-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 20px auto 140px;
+  border-radius: 18px;
+  padding: 70px 30px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.newsletter-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95),
+    rgba(0, 0, 0, 0.35),
+    transparent
+  );
+  z-index: 1;
+}
+
+.newsletter-section h2,
+.newsletter-section p,
+.newsletter-section button {
+  position: relative;
+  z-index: 2;
+}
+
+.newsletter-section h2 {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #FFFFFF;
+}
+
+.newsletter-section h2 span{
+  font-family: "Playball", curive;
+  font-weight: 400;
+}
+
+.newsletter-section p{
+    color: #DECFCF;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.subscribe-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 2px 2px 2px 12px;
+  background: #0069C8;
+  border-radius: 999px;
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0 auto;
+  border: none;
+  margin-bottom: 20px;
+  border: 1px solid #0069C8;
+}
+
+.subscribe-btn:hover {
+  background: #4747485d;
+}
+
+.subscribe-btn:hover .sbr-btn-icon {
+  background: #e8e9ea51;
+  color: white;
+  border: 1px solid #4a02cfe0;
+}
+
+.sbr-btn-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  color: #0066ff;
+  align-items: center;
+  justify-content: center;
+}
+
+.subscribe-btn span {
+  margin-right: 10px;
+}
+
+.blog-tagline-wrapper{
+  overflow: hidden;
+  margin-top: -50px;
+  padding-top: 45px;
+  padding-bottom: 30px;
+}

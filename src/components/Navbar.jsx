@@ -1,7 +1,6 @@
 
 import "@/styles/Navbar.css";
 import { Link, NavLink } from "react-router-dom";
-import { ArrowUpRight } from "lucide-react";
 import cubotsGif from "@/assets/animations/Cubots-gif.gif";
 
 const navItems = [
@@ -61,7 +60,7 @@ export default function Navbar({ variant = "dark" }) {
           </nav>
         </div>
         
-        <Link to="/contact" className="navbar-btn">
+        <Link to="/ask-cubots" className="navbar-btn">
           <span>Ask Cubots</span>
 
           <div className="btn-icon">

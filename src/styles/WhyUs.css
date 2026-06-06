@@ -1,0 +1,325 @@
+.whyus-hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.whyus-hero-bg {
+  position: absolute;
+  right: -15%;
+  top: 50%;
+  transform: translateY(-50%) rotateX(180deg);
+  width: 950px;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.whyus-hero-content {
+  max-width: 900px;
+  position: relative;
+  z-index: 2;
+}
+
+.whyus-hero-content h1 {
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+
+.whyus-hero-content h1 span{
+  font-family: "Playball", Cursive;
+  font-weight: 400;
+}
+
+.whyus-hero-content p {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #8c8c8c;
+  max-width: 950px;
+}
+
+.whyus-hero-content p:last-child {
+  margin-top: 40px;
+}
+
+.whyus-sticky-wrapper {
+  position: relative;
+}
+
+.whyus-growth-section {
+  position: relative;
+  background-color: #000;
+  width: 100%;
+  padding: 60px auto;
+  overflow: hidden;
+  margin: auto;
+}
+
+.whyus-growth-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.whyus-growth-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.whyus-growth-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 42px;
+  padding-top: 200px;
+  padding-bottom: 150px;
+}
+
+.growth-card {
+  width: 420px;
+  background: rgba(245, 245, 245, 0.983);
+  border-radius: 8px;
+  padding: 8px 24px 28px 24px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255,255,255,0.4);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+
+  transition: transform 0.4s ease;
+}
+
+.growth-card:hover {
+  transform: translateY(-8px);
+}
+
+.growth-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111;
+  margin-bottom: 28px;
+}
+
+.growth-card p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #6b6969;
+  margin-bottom: 28px;
+}
+
+.growth-card p:last-child {
+  margin-bottom: 0;
+}
+
+.card-left {
+  margin-top: 230px;
+}
+
+.card-center {
+  margin-top: 175px;
+}
+
+.card-right {
+  margin-top: 0;
+}
+
+.whyus-bento-section {
+  position: sticky;
+  top: 0;
+  z-index: 2;                        
+  padding: 140px 80px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.whyus-bento-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.whyus-bento-title span {
+  font-family: "Playball", cursive;
+  font-size: 52px;
+  display: block;
+  line-height: 1;
+}
+
+.whyus-bento-title h2 {
+  font-size: 50px;
+  line-height: 0.95;
+  font-weight: 500;
+  margin-top: 5px;
+  margin-bottom: 80px;
+}
+
+.whyus-bento-header p {
+  max-width: 650px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #888;
+}
+
+.whyus-bento-grid {
+  display: grid;
+  grid-template-columns:
+    1fr
+    1fr
+    1fr;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.whyus-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+}
+
+.bento-card {
+  position: relative;
+  border-radius: 10px;
+  padding: 0px 28px 8px 28px;
+  overflow: hidden;
+}
+
+.bento-card h3 {
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.bento-card p {
+  font-size: 16px;
+  line-height: 1.4;
+  color: inherit;
+}
+
+.bento-card.light-card {
+  background: #ececec;
+  color: #5B5B5B;
+  font-weight: 500;
+}
+
+.light-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/images/industry-grid-bg.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  opacity: 0.05;
+  filter: grayscale(100%);
+  pointer-events: none;
+}
+
+.bento-card.light-card h3{
+  color: #000;
+}
+
+.bento-card.blue {
+  background: #2185c8;
+  color: white;
+  min-height: 360px;
+}
+
+.bento-card.blue p {
+ color: #D9D9D9;
+  font-weight: 500;
+}
+
+.bento-card.dark-card {
+  background: #000;
+  color: white;
+}
+
+.dark-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/images/industry-grid-bg.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  opacity: 0.15;
+  filter: grayscale(100%);
+  pointer-events: none;
+}
+
+.whyus-column:nth-child(1) .bento-card:first-child {
+  height: 140px;
+}
+
+.whyus-column:nth-child(1) .bento-card:last-child {
+  flex: 1;
+}
+
+.whyus-column:nth-child(2) .bento-card:first-child {
+  flex: 1;
+}
+
+.whyus-column:nth-child(2) .bento-card:last-child {
+  height: 140px;
+}
+
+.bento-card.dark-card p {
+  color: #b8b8b8;
+}
+
+.bento-card.tall {
+  height: 540px;
+}
+.bento-image {
+  width: 85%;
+  display: block;
+  margin: 30px auto 0;
+}
+
+.brain-image {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+}
+
+.whyus-bento-ribbon-left {
+  position: absolute;
+  left: -15%;
+  top: 10%;
+  width: 800px;
+  opacity: 0.12;
+  transform: rotate(-160deg);
+}
+
+.whyus-bento-ribbon-right {
+  position: absolute;
+  right: -30%;
+  bottom: 5%;
+  width: 800px;
+  opacity: 0.12;
+  transform: rotateX(180deg);
+}
+
+.whyus-tagline-wrapper{
+  background-color: #ffffff;
+  overflow: hidden;
+  margin-top: 0px;
+  padding-top: 50px;
+}
