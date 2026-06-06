@@ -145,9 +145,30 @@ export default function CubotsAbout() {
       answer: "Every business operates differently. We begin by understanding operational challenges, workflow structures, business objectives, and growth priorities. This allows us to identify opportunities where AI can create measurable value and support long term business outcomes."
     },
     {
-      question: "Why choose Cubots by CubeMoons?",
+      question: "How do you measure the impact of AI implementation?",
+      answer: "The success of any AI initiative should be tied to business objectives. Depending on the solution, impact may be measured through operational efficiency, reduced manual effort, improved response times, better visibility into data, workflow optimization, or stronger decision making capabilities."
+    },
+     {
+      question: "Are AI agents and AI chatbots the same thing?",
+      answer: "Not exactly. AI chatbots are primarily designed for conversations and customer interactions. AI agents go further by performing tasks, accessing information, supporting workflows, and helping automate operational processes. Modern businesses increasingly use AI agents as intelligent assistants across departments and business functions."
+    },
+     {
+      question: "Which industries can benefit from AI solutions?",
+      answer: "AI can support organizations across manufacturing, retail, healthcare, logistics, finance, real estate, education, professional services, and many other sectors. The key is identifying practical use cases that align with operational needs and business goals."
+    },
+     {
+      question: "Do businesses need large amounts of data to use AI?",
+      answer: "Not always. While some advanced AI models benefit from larger datasets, many automation and intelligent workflow solutions can create value using existing operational information and business processes. The right strategy depends on the organization’s objectives and current digital environment."
+    },
+     {
+      question: "How long does it take to implement an AI solution?",
+      answer: "CImplementation timelines vary depending on project complexity, integration requirements, and business objectives. Some automation solutions can be deployed relatively quickly, while larger enterprise systems may require phased implementation and optimization."
+    },
+     {
+      question: "Why choose Cubots CubeMoons?",
       answer: "Cubots combines intelligent technologies with practical business understanding. Our focus is not simply implementing AI but helping organizations create scalable, usable, and measurable solutions that improve operations, support growth, and deliver long term value."
-    }
+    },
+    
   ];
 
   return (
