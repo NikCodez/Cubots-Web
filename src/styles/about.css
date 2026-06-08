@@ -530,11 +530,11 @@ min-height: 100vh;
   }
 }
 
-.ab-faq-section {
+.ab-faq-section-home {
   position: relative;
   width: 100%;
   background-color: #ffffff; 
-  padding: 8rem 4rem 10rem 4rem;
+  padding: 0rem 4rem 10rem 4rem;
   box-sizing: border-box;
   overflow: hidden;
   z-index: 10;

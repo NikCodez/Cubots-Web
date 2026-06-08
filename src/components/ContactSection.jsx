@@ -85,8 +85,8 @@ function ContactSection() {
             <div className="cubots-footer-contact-item">
               <IoLocationOutline className="cubots-footer-contact-icon location-icon" />
               <span>
-                4th floor, MR DIY Building, beside Westside<br />
-                Anupam Garden, Samta Colony, Raipur,<br />
+                4th floor, Abhikaran Business<br /> Centre,
+                GE Road, Raipur,<br />
                 Chhattisgarh 492001
               </span>
             </div>
@@ -96,7 +96,7 @@ function ContactSection() {
             </div>
             <div className="cubots-footer-contact-item">
               <FiMail className="cubots-footer-contact-icon" />
-              <a href="mailto:info@cubots.com">Contact@cubots.ai</a>
+              <a href="mailto:info@cubots.com">contact@cubots.ai</a>
             </div>
           </div>
 

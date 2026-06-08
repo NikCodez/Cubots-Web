@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  padding: 0;
   font-family: "Inter", sans-serif;
+  padding: 0;
   background-color: #0d1216;
   overflow-x: clip;
 }
@@ -300,6 +300,10 @@ html {
   align-items: start;
 }
 
+.about-left {
+  margin-top: -35px;
+}
+
 .about-left h2 {
   font-family: "Geist", "Inter", "sans-serif";
   max-width: 1200px;
@@ -383,10 +387,9 @@ html {
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
 }
 
-.showcase-image {
+.showcase-video {
   width: 100%;
-  display: block;
-  height: 530px;
+  height: 650px;
   object-fit: cover;
   object-position: center;
   display: block;

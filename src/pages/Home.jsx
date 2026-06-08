@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Navbar from "@/components/Navbar";
 import ContactSection from "@/components/ContactSection";
 import CubotsTagline from "@/components/CubotsTagline";
@@ -11,7 +11,7 @@ import aboutBg from "@/assets/images/about-bg.png";
 import featureImg1 from "@/assets/images/about-feature-1.jpg";
 import featureImg2 from "@/assets/images/about-feature-2.jpg";
 import featureImg3 from "@/assets/images/about-feature-3.jpg";
-import showcaseImage from "@/assets/images/about-card-image.png";
+import showcaseVideo from "@/assets/animations/Cubots-saas.mp4";
 import manufacturingImg from "@/assets/images/manufacturing.png";
 import retailImg from "@/assets/images/Retail.png";
 import logisticsImg from "@/assets/images/Logistics.png";
@@ -84,9 +84,42 @@ const SERVICES = [
   },
 ];
 
+const faqData = [
+  {
+    question: "Are AI agents and AI chatbots the same thing?",
+    answer:
+      "Not exactly. AI chatbots are primarily designed for conversations and customer interactions. AI agents go further by performing tasks, accessing information, supporting workflows, and helping automate operational processes. Modern businesses increasingly use AI agents as intelligent assistants across departments and business functions.",
+  },
+  {
+    question: "Which industries can benefit from AI solutions?",
+    answer:
+      "AI can support organizations across manufacturing, retail, healthcare, logistics, finance, real estate, education, professional services, and many other sectors. The key is identifying practical use cases that align with operational needs and business goals.",
+  },
+  {
+    question: "Do businesses need large amounts of data to use AI?",
+    answer:
+      "Not always. While some advanced AI models benefit from larger datasets, many automation and intelligent workflow solutions can create value using existing operational information and business processes. The right strategy depends on the organization’s objectives and current digital environment.",
+  },
+  {
+    question: "How long does it take to implement an AI solution?",
+    answer:
+      "CImplementation timelines vary depending on project complexity, integration requirements, and business objectives. Some automation solutions can be deployed relatively quickly, while larger enterprise systems may require phased implementation and optimization.",
+  },
+  {
+    question: "Why choose Cubots CubeMoons?",
+    answer:
+      "Cubots combines intelligent technologies with practical business understanding. Our focus is not simply implementing AI but helping organizations create scalable, usable, and measurable solutions that improve operations, support growth, and deliver long term value.",
+  },
+];
+
 export default function Home() {
   const [activeService, setActiveService] = useState(0);
   const current = SERVICES[activeService];
+  const [activeFaq, setActiveFaq] = useState(null);
+
+  const toggleFaq = (index) => {
+    setActiveFaq(activeFaq === index ? null : index);
+  };
 
   return (
     <>
@@ -205,11 +238,16 @@ export default function Home() {
             </div>
 
             <div className="showcase-card">
-              <img
-                src={showcaseImage}
-                alt="Cubots AI"
-                className="showcase-image"
-              />
+              <video
+                className="showcase-video"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
+              >
+                <source src={showcaseVideo} type="video/mp4" />
+              </video>
 
               <div className="showcase-caption">
                 Practical AI built around
@@ -345,7 +383,7 @@ export default function Home() {
 
         <section className="sticky-video-section">
           <div className="sticky-video-wrapper">
-            <video className="sticky-video" autoPlay muted loop playsInline>
+            <video className="sticky-video" autoPlay muted loop playsInline preload="auto">
               <source src={CubotsVideo} type="video/mp4" />
             </video>
           </div>
@@ -490,7 +528,6 @@ export default function Home() {
         {/* Insights Section */}
         <section className="insights-section">
           <div className="insights-container">
-            <CubotsTagline />
             <div className="insights-intro">
               <div className="intro-left">
                 <h3>
@@ -562,6 +599,53 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section className="ab-faq-section-home">
+          <div
+            className="faq-glass-ribbon-bg"
+            style={{ backgroundImage: `url(${aboutBg})` }}
+          />
+
+          <div className="faq-container-box">
+            <h2 className="faq-main-heading">
+              <em>Frequently</em> Asked Questions
+            </h2>
+
+            <div className="faq-accordion-list">
+              {faqData.map((faq, index) => {
+                const isOpen = activeFaq === index;
+                return (
+                  <div
+                    key={index}
+                    className={`faq-accordion-card ${isOpen ? "faq-card--open" : ""}`}
+                  >
+                    <button
+                      className="faq-accordion-trigger"
+                      onClick={() => toggleFaq(index)}
+                      aria-expanded={isOpen}
+                    >
+                      <span className="faq-question-text">{faq.question}</span>
+                      <span className="faq-icon-indicator">
+                        {isOpen ? "−" : "+"}
+                      </span>
+                    </button>
+
+                    <div className="faq-collapse-panel">
+                      <div className="faq-answer-inner-content">
+                        <p className="faq-answer-paragraph">{faq.answer}</p>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        <section className="whyus-tagline-wrapper">
+        <CubotsTagline />
+      </section>
+
       </main>
 
       <ContactSection />
