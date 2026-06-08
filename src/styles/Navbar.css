@@ -63,13 +63,11 @@
 }
 
 .nav-link-light {
-  color: #383838d3;
-  font-weight: 500;
+  color: black;
 }
 
 .nav-link-light:hover {
-  color: black;
-  opacity: 1.5;
+  opacity: 0.65;
 }
 
 .active-link {
@@ -92,15 +90,21 @@
 
 .navbar-btn {
   position: relative;
+
   display: flex;
   align-items: center;
+
   padding: 2px 2px 2px 12px;
+
   background: #0066ff;
   border-radius: 999px;
+
   text-decoration: none;
   color: white;
+
   font-size: 13px;
   font-weight: 500;
+
   transition: 0.3s ease;
 }
 
@@ -118,7 +122,6 @@
   border-radius: 50%;
   background: white;
   display: flex;
-  color: #0066ff;
   align-items: center;
   justify-content: center;
 }
@@ -127,14 +130,30 @@
   scale: 1.8;
  }
 
-
-@media (min-height: 900px) and (min-width: 1400px) {
+@media (min-width: 1800px) {
+  
 .navbar-container {
-  max-width: 1600px;
+  max-width: 1800px;
   margin: 0 auto;
   padding: 20px 12px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 }
+/* 
+@media (min-width: 1600px) {
+  
+.navbar-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+} */

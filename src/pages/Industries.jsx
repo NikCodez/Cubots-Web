@@ -265,7 +265,7 @@ function Industries() {
     <Navbar variant="light"/>
     <section className="ind-section">
         <div className="deco-wrapper" aria-hidden="true">
-    <img src={waveBlob} className="bg-deco" alt="" />
+    {/* <img src={waveBlob} className="bg-deco" alt="" /> */}
   </div>
     
       <div className="ind-nav-wrapper">

@@ -66,6 +66,9 @@
 .cubots-footer-social-side {
   display: flex;
   gap: 1rem;
+  position: absolute;
+  margin-top: 50px;
+  right: 75px;
 }
 
 .cubots-footer-social-circle {
@@ -392,11 +395,11 @@
   }
 }
 
-@media (min-height: 900px) and (min-width: 1400px) {
+@media (min-width: 1800px) {
 
   .cubots-footer-container {
   width: 100%;
-  max-width: 1620px;
+  max-width: 1820px;
   margin: 0 auto;
   box-sizing: border-box;
 }

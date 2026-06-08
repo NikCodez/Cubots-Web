@@ -602,7 +602,7 @@ export default function Home() {
 
         <section className="ab-faq-section-home">
           <div
-            className="faq-glass-ribbon-bg"
+            className="faq-glass-ribbon-bg-home"
             style={{ backgroundImage: `url(${aboutBg})` }}
           />
 

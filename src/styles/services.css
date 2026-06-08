@@ -157,8 +157,8 @@
 
 .hero-image-side {
   position: absolute;
-  right: 20px;
-  bottom: -300px;
+ right: 100px;
+  bottom: 60px;
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -167,7 +167,7 @@
 
 .hero-robot-hand-img {
   width: 50%;
-  max-width: 720px;
+  max-width: 850px;
   height: auto;
   object-fit: contain;
 }
@@ -203,7 +203,7 @@
 
 .feature-title-text {
   font-style:  "geist";
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: #ffffff;
   margin: 0;
@@ -211,7 +211,7 @@
 }
 
 .feature-description-text {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   color: #a09f9f;
   line-height: 1.6;
   margin: 0;
