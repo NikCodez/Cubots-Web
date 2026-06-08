@@ -292,7 +292,7 @@ html {
   margin-inline: auto;
 }
 
-.about-content {
+.about-content-section {
   display: grid;
   grid-template-columns: 0.9fr 1.4fr;
   gap: 60px;

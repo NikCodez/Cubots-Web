@@ -140,7 +140,7 @@ export default function Home() {
           <img src={aboutBg} alt="background" className="about-bg-image" />
 
           <div className="about-container">
-            <div className="about-content">
+            <div className="about-content-section">
               <div className="about-left">
                 <h2>
                   Discover What
@@ -349,84 +349,84 @@ export default function Home() {
               <source src={CubotsVideo} type="video/mp4" />
             </video>
           </div>
-        
 
-        <section className="why-cubots">
-          <div className="why-header">
-            <div className="why-title">
-              <h2>
-                Why Cubots Stands Out{" "}
-                <span>
-                  in
-                  <br />
-                  Digital Innovation
-                </span>
-              </h2>
+          <section className="why-cubots">
+            <div className="why-header">
+              <div className="why-title">
+                <h2>
+                  Why Cubots Stands Out{" "}
+                  <span>
+                    in
+                    <br />
+                    Digital Innovation
+                  </span>
+                </h2>
+              </div>
+
+              <div className="why-description">
+                <p>
+                  From intelligent automation to custom software engineering, we
+                  deliver <br /> future-ready solutions that drive efficiency,
+                  agility, and measurable success.
+                </p>
+              </div>
             </div>
 
-            <div className="why-description">
-              <p>
-                From intelligent automation to custom software engineering, we
-                deliver <br /> future-ready solutions that drive efficiency,
-                agility, and measurable success.
-              </p>
+            <div className="why-cards">
+              <div className="why-card card-blue">
+                <h3>
+                  Transforming Modern Businesses with Scalable Technology
+                  Solutions
+                </h3>
+
+                <p>
+                  From intelligent automation platforms to custom digital
+                  ecosystems, we create adaptable solutions that improve
+                  performance, accelerate innovation, and enable long-term
+                  operational success.
+                </p>
+
+                <button className="card-arrow">
+                  <ArrowUpRight size={14} strokeWidth={2.4} />
+                </button>
+              </div>
+
+              <div className="why-card card-navy">
+                <h3>
+                  Empowering Businesses with Practical AI and Automation
+                  Solutions
+                </h3>
+
+                <p>
+                  From streamlined workflow automation to scalable software
+                  development, we design technology solutions focused on
+                  measurable outcomes, operational clarity, and future-ready
+                  business transformation.
+                </p>
+
+                <button className="card-arrow">
+                  <ArrowUpRight size={14} strokeWidth={2.4} />
+                </button>
+              </div>
+
+              <div className="why-card card-light">
+                <h3>
+                  Driving Smarter Business Growth with Intelligent Digital
+                  Solutions
+                </h3>
+
+                <p>
+                  From AI-powered automation to data-driven software systems, we
+                  build practical technology solutions that enhance efficiency,
+                  simplify operations, and support sustainable business growth.
+                </p>
+
+                <button className="card-arrow dark">
+                  <ArrowUpRight size={14} strokeWidth={2.4} />
+                </button>
+              </div>
             </div>
-          </div>
-
-          <div className="why-cards">
-            <div className="why-card card-blue">
-              <h3>
-                Transforming Modern Businesses with Scalable Technology
-                Solutions
-              </h3>
-
-              <p>
-                From intelligent automation platforms to custom digital
-                ecosystems, we create adaptable solutions that improve
-                performance, accelerate innovation, and enable long-term
-                operational success.
-              </p>
-
-              <button className="card-arrow">
-                <ArrowUpRight size={14} strokeWidth={2.4} />
-              </button>
-            </div>
-
-            <div className="why-card card-navy">
-              <h3>
-                Empowering Businesses with Practical AI and Automation Solutions
-              </h3>
-
-              <p>
-                From streamlined workflow automation to scalable software
-                development, we design technology solutions focused on
-                measurable outcomes, operational clarity, and future-ready
-                business transformation.
-              </p>
-
-              <button className="card-arrow">
-                <ArrowUpRight size={14} strokeWidth={2.4} />
-              </button>
-            </div>
-
-            <div className="why-card card-light">
-              <h3>
-                Driving Smarter Business Growth with Intelligent Digital
-                Solutions
-              </h3>
-
-              <p>
-                From AI-powered automation to data-driven software systems, we
-                build practical technology solutions that enhance efficiency,
-                simplify operations, and support sustainable business growth.
-              </p>
-
-              <button className="card-arrow dark">
-                <ArrowUpRight size={14} strokeWidth={2.4} />
-              </button>
-            </div>
-          </div>
-        </section>
+          </section>
         </section>
 
         {/* Services Section */}

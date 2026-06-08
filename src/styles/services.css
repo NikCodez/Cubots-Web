@@ -48,8 +48,8 @@
 
 .hero-image-side {
   position: absolute;
-  right: 10px;
-  bottom: -280px;
+  right: 40px;
+  bottom: 10px;
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -170,7 +170,6 @@
   max-width: 720px;
   height: auto;
   object-fit: contain;
-  transform: translateY(-1px);
 }
 
 .features-row {

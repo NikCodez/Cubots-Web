@@ -31,12 +31,10 @@ function App() {
       <Route path="/blogs/data-intelligence" element={<DataIntelligence />} />
       <Route path="/why-us" element={<WhyUs />} />
       <Route path="/ask-cubots" element={<AskCubots />} />
-         <Route path="/services" element={<Services />} />
+      <Route path="/services" element={<Services />} />
       <Route path="/industries" element={<Industries />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
-       
-
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/terms-of-service" element={<TermsOfService />} />
       <Route path="/cookie-policy" element={<CookiePolicy />} />

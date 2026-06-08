@@ -10,64 +10,54 @@ const WhyUsTimeline = () => {
 
   const [translateX, setTranslateX] = useState(0);
 
-useEffect(() => {
-  const handleScroll = () => {
-    if (!trackRef.current || !contentRef.current) return;
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!trackRef.current || !contentRef.current) return;
 
-    const track = trackRef.current;
+      const track = trackRef.current;
 
-    const rect = track.getBoundingClientRect();
+      const rect = track.getBoundingClientRect();
 
-    const scrollableHeight =
-      track.offsetHeight - window.innerHeight;
+      const scrollableHeight = track.offsetHeight - window.innerHeight;
 
-    const progress = Math.min(
-      Math.max(-rect.top / scrollableHeight, 0),
-      1
-    );
+      const rawProgress = -rect.top / scrollableHeight;
 
-    const lastCard =
-  contentRef.current.lastElementChild;
+      const progress = Math.min(Math.max(rawProgress, 0), 1);
 
-const maxTranslate =
-  lastCard.offsetLeft -
-  (window.innerWidth - lastCard.offsetWidth) / 1.5;
+      const lastCard = contentRef.current.lastElementChild;
 
-    const targetX = -progress * maxTranslate;
+      const maxTranslate =
+        lastCard.offsetLeft - (window.innerWidth - lastCard.offsetWidth) / 1.5;
 
-setTranslateX(prev =>
-  prev + (targetX - prev) * 0.08
-);
-  };
+      const targetX = -progress * maxTranslate;
 
-  handleScroll();
+      setTranslateX(targetX);
+    };
 
-  window.addEventListener("scroll", handleScroll);
-  window.addEventListener("resize", handleScroll);
+    handleScroll();
 
-  return () => {
-    window.removeEventListener("scroll", handleScroll);
-    window.removeEventListener("resize", handleScroll);
-  };
-}, []);;
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll);
 
-useEffect(() => {
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
     const updateHeight = () => {
-      const horizontalDistance =
-  contentRef.current.scrollWidth -
-  window.innerWidth;
+      if (!contentRef.current || !trackRef.current) return;
 
-trackRef.current.style.height =
-  `${horizontalDistance + window.innerHeight}px`;
+      const horizontalDistance =
+        contentRef.current.scrollWidth - window.innerWidth;
+
+      trackRef.current.style.height = `${horizontalDistance + window.innerHeight * 2}px`;
     };
 
     updateHeight();
-
     window.addEventListener("resize", updateHeight);
-
-    return () => {
-      window.removeEventListener("resize", updateHeight);
-    };
+    return () => window.removeEventListener("resize", updateHeight);
   }, []);
 
   const cards = [
@@ -187,14 +177,14 @@ trackRef.current.style.height =
 
               <div className="whyus-timeline-line" />
               <div className="whyus-timeline-card-content">
-              <h3>{card.title}</h3>
+                <h3>{card.title}</h3>
 
-              <div className="whyus-timeline-desc">
-                {card.desc.map((paragraph, index) => (
-                  <p key={index}>{paragraph}</p>
-                ))}
+                <div className="whyus-timeline-desc">
+                  {card.desc.map((paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                  ))}
+                </div>
               </div>
-               </div>
             </div>
           ))}
         </div>

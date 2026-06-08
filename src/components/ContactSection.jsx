@@ -96,7 +96,7 @@ function ContactSection() {
             </div>
             <div className="cubots-footer-contact-item">
               <FiMail className="cubots-footer-contact-icon" />
-              <a href="mailto:info@cubots.com">contact@cubots.ai</a>
+              <a href="mailto:info@cubots.com">Contact@cubots.ai</a>
             </div>
           </div>
 

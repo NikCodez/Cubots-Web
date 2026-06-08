@@ -91,7 +91,7 @@
 
 .growth-card {
   width: 420px;
-  background: rgba(245, 245, 245, 0.983);
+  background: #1F1D1D;
   border-radius: 8px;
   padding: 8px 24px 28px 24px;
   box-sizing: border-box;
@@ -109,14 +109,14 @@
   font-size: 20px;
   font-weight: 700;
   line-height: 1.2;
-  color: #111;
+  color: #FFFFFF;
   margin-bottom: 28px;
 }
 
 .growth-card p {
   font-size: 16px;
   line-height: 1.8;
-  color: #6b6969;
+  color: #ACA2A2;
   margin-bottom: 28px;
 }
 
