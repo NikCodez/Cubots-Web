@@ -11,7 +11,7 @@ import Circleloop from "@/assets/images/Circleloop.svg";
 import Arrowscale from "@/assets/images/Arrow scale.svg";
 import Circlegrid from "@/assets/images/Circlegrid.svg";
 import uifall from "@/assets/images/ui falls.mp4";
-import ribbonBg from "@/assets/images/ribbon-bg.png"; 
+import ribbonBg from "@/assets/images/ribbon-bg.png";
 import iconVision from "@/assets/images/icon-vision.png";
 import iconTechExcellence from "@/assets/images/icon-tech.png";
 import iconIntelligentInnovation from "@/assets/images/icon-robot.png";
@@ -49,12 +49,12 @@ export default function CubotsAbout() {
       if (rect.top <= 0 && scrolledDistance <= maxVerticalScroll) {
         const maxHorizontalScroll = progressContentRef.current.scrollWidth - window.innerWidth;
         const percentage = scrolledDistance / maxVerticalScroll;
-        
+
         setProgressTranslateX(-percentage * maxHorizontalScroll);
-      } 
+      }
       else if (rect.top > 0) {
         setProgressTranslateX(0);
-      } 
+      }
       else if (scrolledDistance > maxVerticalScroll) {
         const maxHorizontalScroll = progressContentRef.current.scrollWidth - window.innerWidth;
         setProgressTranslateX(-maxHorizontalScroll);
@@ -63,7 +63,7 @@ export default function CubotsAbout() {
 
     window.addEventListener("scroll", handleHorizontalScroll);
     window.addEventListener("resize", handleHorizontalScroll);
-    
+
     return () => {
       window.removeEventListener("scroll", handleHorizontalScroll);
       window.removeEventListener("resize", handleHorizontalScroll);
@@ -147,36 +147,15 @@ export default function CubotsAbout() {
     {
       question: "How do you measure the impact of AI implementation?",
       answer: "The success of any AI initiative should be tied to business objectives. Depending on the solution, impact may be measured through operational efficiency, reduced manual effort, improved response times, better visibility into data, workflow optimization, or stronger decision making capabilities."
-    },
-     {
-      question: "Are AI agents and AI chatbots the same thing?",
-      answer: "Not exactly. AI chatbots are primarily designed for conversations and customer interactions. AI agents go further by performing tasks, accessing information, supporting workflows, and helping automate operational processes. Modern businesses increasingly use AI agents as intelligent assistants across departments and business functions."
-    },
-     {
-      question: "Which industries can benefit from AI solutions?",
-      answer: "AI can support organizations across manufacturing, retail, healthcare, logistics, finance, real estate, education, professional services, and many other sectors. The key is identifying practical use cases that align with operational needs and business goals."
-    },
-     {
-      question: "Do businesses need large amounts of data to use AI?",
-      answer: "Not always. While some advanced AI models benefit from larger datasets, many automation and intelligent workflow solutions can create value using existing operational information and business processes. The right strategy depends on the organization’s objectives and current digital environment."
-    },
-     {
-      question: "How long does it take to implement an AI solution?",
-      answer: "CImplementation timelines vary depending on project complexity, integration requirements, and business objectives. Some automation solutions can be deployed relatively quickly, while larger enterprise systems may require phased implementation and optimization."
-    },
-     {
-      question: "Why choose Cubots CubeMoons?",
-      answer: "Cubots combines intelligent technologies with practical business understanding. Our focus is not simply implementing AI but helping organizations create scalable, usable, and measurable solutions that improve operations, support growth, and deliver long term value."
-    },
-    
+    }
   ];
 
   return (
     <>
-    <div className="hero-scroll-cage">
-        
+      <div className="hero-scroll-cage">
+
         <section className="first-video-section">
-          <Navbar variant="dark"/>
+          <Navbar variant="dark" />
           <div className="about-wrapper">
             <video className="about-video-bg" autoPlay loop muted playsInline>
               <source src={about1bg} type="video/mp4" />
@@ -189,128 +168,128 @@ export default function CubotsAbout() {
           </div>
         </section>
 
-    <section className="mission-wrapper">
-      <div className="mission-image-side">
-        <img src={blob} alt="decorative shape" className="mission-shape-img" />
+        <section className="mission-wrapper">
+          <div className="mission-image-side">
+            <img src={blob} alt="decorative shape" className="mission-shape-img" />
+          </div>
+          <div className="mission-text-side">
+            <p className="mission-para">
+              As businesses generate more data, manage increasingly complex workflows,
+              and operate in rapidly changing environments, the need for intelligent systems
+              continues to grow.
+            </p>
+
+            <p className="mission-para">
+              Cubots was created to help organizations bridge the gap between emerging
+              technologies and practical implementation through AI driven solutions that
+              improve efficiency, visibility, and decision making.
+            </p>
+
+            <a href="/services" className="ab-transform-cta">
+              <span>Subscribe Now</span>
+              <span className="ab-transform-subscribeNow-arrow-wrap">
+                <img src={exploreArrow} alt="↗" className="ab-transform-subscribeNow-arrow-img" />
+              </span>
+            </a>
+          </div>
+        </section>
       </div>
-      <div className="mission-text-side">
-        <p className="mission-para">
-          As businesses generate more data, manage increasingly complex workflows,
-          and operate in rapidly changing environments, the need for intelligent systems
-          continues to grow.
-        </p>
 
-        <p className="mission-para">
-          Cubots was created to help organizations bridge the gap between emerging
-          technologies and practical implementation through AI driven solutions that
-          improve efficiency, visibility, and decision making.
-        </p>
+      <section className="ab-features-section">
+        <div className="mission-cards-grid">
 
-        <a href="/services" className="ab-transform-cta">
-          <span>Subscribe Now</span>
-          <span className="ab-transform-subscribeNow-arrow-wrap">
-            <img src={exploreArrow} alt="↗" className="ab-transform-subscribeNow-arrow-img" />
-          </span>
-        </a>
-      </div>   
-    </section>
-    </div>
-    
-    <section className="ab-features-section">
-      <div className="mission-cards-grid">
-        
-        <div className="mission-box mission-box--dark">
-          <div className="mission-box-content">
-            <h3 className="mission-box-title">Navigating The Future Of <em>Intelligent Business</em></h3>
-            <p className="mission-box-desc">
-              The future belongs to organizations that can adapt quickly, make informed decisions, and operate with greater visibility. Our work is guided by four principles that shape every solution we build.
-            </p>
+          <div className="mission-box mission-box--dark">
+            <div className="mission-box-content">
+              <h3 className="mission-box-title">Navigating The Future Of <em>Intelligent Business</em></h3>
+              <p className="mission-box-desc">
+                The future belongs to organizations that can adapt quickly, make informed decisions, and operate with greater visibility. Our work is guided by four principles that shape every solution we build.
+              </p>
+            </div>
+            <div className="mission-box-graphic">
+              <img src={container} alt="Line Design Accent" className="mission-box-vector" />
+            </div>
           </div>
-          <div className="mission-box-graphic">
-            <img src={container} alt="Line Design Accent" className="mission-box-vector" />
-          </div>
-        </div>
 
-     
-        <div className="mission-box mission-box--light">
-          <div className="mission-box-content">
-            <h3 className="mission-box-title"><em>Modern businesses</em> need more than software.</h3>
-            <p className="mission-box-desc">
-              They need intelligent systems that connect information, automate repetitive work, and provide greater visibility into operations.
-            </p>
-            <p className="mission-box-desc">
-              Cubots helps organizations create these environments through practical AI implementation designed around business goals, operational efficiency, and long term scalability.
-            </p>
-          </div>
-          <div className="mission-box-graphic">
-            <img src={Circleloop} alt="Line Design Accent" className="mission-box-vector" />
-          </div>
-        </div>
 
-      
-        <div className="mission-box mission-box--dark">
-          <div className="mission-box-content">
-            <h3 className="mission-box-title">Knowledge is an essential part of <em>innovation.</em></h3>
-            <p className="mission-box-desc">
-              Through our insights, perspectives, and research, we explore the technologies, trends, and business strategies shaping the future of intelligent operations.
-            </p>
-            <p className="mission-box-desc">
-              Our goal is to help organizations better understand artificial intelligence, automation, analytics, and digital transformation while providing practical perspectives that support informed decision making.
-            </p>
+          <div className="mission-box mission-box--light">
+            <div className="mission-box-content">
+              <h3 className="mission-box-title"><em>Modern businesses</em> need more than software.</h3>
+              <p className="mission-box-desc">
+                They need intelligent systems that connect information, automate repetitive work, and provide greater visibility into operations.
+              </p>
+              <p className="mission-box-desc">
+                Cubots helps organizations create these environments through practical AI implementation designed around business goals, operational efficiency, and long term scalability.
+              </p>
+            </div>
+            <div className="mission-box-graphic">
+              <img src={Circleloop} alt="Line Design Accent" className="mission-box-vector" />
+            </div>
           </div>
-          <div className="mission-box-graphic">
-            <img src={Arrowscale} alt="Line Design Accent" className="mission-box-vector" />
-          </div>
-        </div>
 
-       
-        <div className="mission-box mission-box--light">
-          <div className="mission-box-content">
-            <h3 className="mission-box-title">Transforming Business Operations Through <em>Intelligent Technology</em></h3>
-            <p className="mission-box-desc">
-              Our approach is centered on usability, scalability, and operational impact, ensuring that technology becomes a meaningful part of business transformation rather than an isolated tool.
-            </p>
-          </div>
-          <div className="mission-box-graphic">
-            <img src={Circlegrid} alt="Line Design Accent" className="mission-box-vector" />
-          </div>
-        </div>
 
-      </div>
-    </section>
-    <div className="second-scroll-cage">
-      <section className="ab-video-scroll-track">
-        <div className="ab-sticky-video-view">
-          <video className="ab-scroll-video-asset" autoPlay loop muted playsInline>
-            <source src={uifall} type="video/mp4" />
-          </video>
-          <div className="ab-video-scroll-mask" />
+          <div className="mission-box mission-box--dark">
+            <div className="mission-box-content">
+              <h3 className="mission-box-title">Knowledge is an essential part of <em>innovation.</em></h3>
+              <p className="mission-box-desc">
+                Through our insights, perspectives, and research, we explore the technologies, trends, and business strategies shaping the future of intelligent operations.
+              </p>
+              <p className="mission-box-desc">
+                Our goal is to help organizations better understand artificial intelligence, automation, analytics, and digital transformation while providing practical perspectives that support informed decision making.
+              </p>
+            </div>
+            <div className="mission-box-graphic">
+              <img src={Arrowscale} alt="Line Design Accent" className="mission-box-vector" />
+            </div>
+          </div>
+
+
+          <div className="mission-box mission-box--light">
+            <div className="mission-box-content">
+              <h3 className="mission-box-title">Transforming Business Operations Through <em>Intelligent Technology</em></h3>
+              <p className="mission-box-desc">
+                Our approach is centered on usability, scalability, and operational impact, ensuring that technology becomes a meaningful part of business transformation rather than an isolated tool.
+              </p>
+            </div>
+            <div className="mission-box-graphic">
+              <img src={Circlegrid} alt="Line Design Accent" className="mission-box-vector" />
+            </div>
+          </div>
+
         </div>
       </section>
-    
-      <div className="progress-scroll-track" ref={progressTrackRef}>
+      <div className="second-scroll-cage">
+        <section className="ab-video-scroll-track">
+          <div className="ab-sticky-video-view">
+            <video className="ab-scroll-video-asset" autoPlay loop muted playsInline>
+              <source src={uifall} type="video/mp4" />
+            </video>
+            <div className="ab-video-scroll-mask" />
+          </div>
+        </section>
+
+        <div className="progress-scroll-track" ref={progressTrackRef}>
           <div className="progress-sticky-view">
-            
-            <div 
-              className="progress-ribbon-bg" 
+
+            <div
+              className="progress-ribbon-bg"
               style={{ backgroundImage: `url(${ribbonBg})` }}
             />
-<div className="progress-header-block">
-                <h1 className="progress-main-title">
-                  Built for <em>Meaningful </em> &nbsp;Progress
-                </h1>
-                <p className="progress-main-desc">
-                  Cubots helps businesses accelerate innovation, modernize operations, and unlock new possibilities through 
-                  AI-powered technology, intelligent engineering, and scalable digital transformation.
-                </p>
-              </div>
+            <div className="progress-header-block">
+              <h1 className="progress-main-title">
+                Built for <em>Meaningful </em> &nbsp;Progress
+              </h1>
+              <p className="progress-main-desc">
+                Cubots helps businesses accelerate innovation, modernize operations, and unlock new possibilities through
+                AI-powered technology, intelligent engineering, and scalable digital transformation.
+              </p>
+            </div>
 
-            <div 
-              className="progress-horizontal-content" 
+            <div
+              className="progress-horizontal-content"
               ref={progressContentRef}
               style={{ transform: `translateX(${progressTranslateX}px)` }}
             >
-        
+
               <div className="progress-cards-row">
                 {cardsData.map((card) => (
                   <div key={card.id} className="progress-card">
@@ -332,7 +311,7 @@ export default function CubotsAbout() {
       <section className="ab-faq-section">
 
         <div
-          className="faq-glass-ribbon-bg" 
+          className="faq-glass-ribbon-bg"
           style={{ backgroundImage: `url(${waveBlob})` }}
         />
 
@@ -345,13 +324,13 @@ export default function CubotsAbout() {
             {faqData.map((faq, index) => {
               const isOpen = activeFaq === index;
               return (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className={`faq-accordion-card ${isOpen ? "faq-card--open" : ""}`}
                 >
-               
-                  <button 
-                    className="faq-accordion-trigger" 
+
+                  <button
+                    className="faq-accordion-trigger"
                     onClick={() => toggleFaq(index)}
                     aria-expanded={isOpen}
                   >
@@ -359,7 +338,7 @@ export default function CubotsAbout() {
                     <span className="faq-icon-indicator">{isOpen ? "−" : "+"}</span>
                   </button>
 
-                
+
                   <div className="faq-collapse-panel">
                     <div className="faq-answer-inner-content">
                       <p className="faq-answer-paragraph">{faq.answer}</p>
@@ -372,10 +351,9 @@ export default function CubotsAbout() {
         </div>
       </section>
       <section className="about-tagline-wrapper">
-      <CubotsTagline/>
+        <CubotsTagline />
       </section>
-    <ContactSection/>
+      <ContactSection />
     </>
   );
 }
- 
